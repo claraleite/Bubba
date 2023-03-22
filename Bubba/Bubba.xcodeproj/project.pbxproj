@@ -11,8 +11,12 @@
 		C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35D29CB4268009A34AC /* ContentView.swift */; };
 		C1EBA36029CB4269009A34AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EBA35F29CB4269009A34AC /* Assets.xcassets */; };
 		C1EBA36329CB4269009A34AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EBA36229CB4269009A34AC /* Preview Assets.xcassets */; };
+
 		C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */; };
 		C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */; };
+
+		ECC175B529CB44090071CEEE /* GardemGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC175B429CB44090071CEEE /* GardemGame.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +25,12 @@
 		C1EBA35D29CB4268009A34AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1EBA35F29CB4269009A34AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1EBA36229CB4269009A34AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+
 		C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHomeView.swift; sourceTree = "<group>"; };
 		C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackground.swift; sourceTree = "<group>"; };
+
+		ECC175B429CB44090071CEEE /* GardemGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardemGame.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 		C1EBA34F29CB4268009A34AC = {
 			isa = PBXGroup;
 			children = (
+				ECC175B429CB44090071CEEE /* GardemGame.swift */,
 				C1EBA35A29CB4268009A34AC /* Bubba */,
 				C1EBA35929CB4268009A34AC /* Products */,
 			);
@@ -153,6 +162,7 @@
 			files = (
 				C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */,
 				C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardemGame.swift in Sources */,
 				C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */,
 				C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */,
 			);
