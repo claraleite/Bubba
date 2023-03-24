@@ -10,7 +10,7 @@ import SwiftUI
 struct RoomHomeView: View {
     
     @State var isDark: Bool = false
-    @State var switchWiggles = false
+    @State private var shouldAnimate = false
     
     var body: some View {
         
@@ -20,7 +20,7 @@ struct RoomHomeView: View {
                 
                 DefaultBackground(imageName: isDark ? "Quarto-escuro" : "Quarto")
                 
-                                
+                
                 VStack {
                     
                     Button(action: {
@@ -43,15 +43,14 @@ struct RoomHomeView: View {
                 }) {
                     Image("Interruptor")
                         .position(x: (geometry.size.width * 0.33), y: geometry.size.height * 0.63)
-                        .rotationEffect(.degrees(switchWiggles ? 1.0 : 0))
-                        .rotation3DEffect(.degrees(1.0), axis: (x: 0, y: 5, z: 0))
-                        .animation(Animation.easeInOut(duration: 0.15).repeatForever(), value: switchWiggles)
+                        .scaleEffect(shouldAnimate ? 1.1 : 1.05)
+                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true))
                         .onAppear() {
-                            switchWiggles.toggle()
+                            self.shouldAnimate = true
                         }
-
+                    
                 }
-
+                
                 
                 
             }
