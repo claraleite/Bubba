@@ -6,8 +6,19 @@
 //
 
 import SwiftUI
+import SpriteKit
+
 
 struct RoomGameView: View {
+    
+    var scene: SKScene {
+        let scene = GameScene()
+        scene.size = CGSize(width: 300, height: 300)
+        scene.scaleMode = .fill
+        
+        return scene
+    }
+    
     
     @State var isMonsterBedTapped: Bool = false
     @State var isMonsterShelfTapped: Bool = false
@@ -30,56 +41,58 @@ struct RoomGameView: View {
                 
                 DefaultBackground(imageName: "Quarto-mini-game")
                 
+                SpriteView(scene: scene)
+                    .frame(width: 300, height: 300)
                 
-                // bed monster
-                    Button(action: {
-                        isMonsterBedTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterBedTapped ? monstersBed[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.95)
-                        
-                    }
-                
-                // shelf monster
-                    Button(action: {
-                        isMonsterShelfTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterShelfTapped ? monstersShelf[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.42)
-                        
-                    }
-                
-                // table monster
-                    Button(action: {
-                        isMonsterTableTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterTableTapped ? monstersTable[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.7, y: geometry.size.height * 0.98)
-                        
-                    }
-
-                // closet monster
-                    Button(action: {
-                        isMonsterClosetTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterClosetTapped ? monstersCloset[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.9, y: geometry.size.height * 0.3)
-                        
-                    }
-                
-                // drawer monster
-                    Button(action: {
-                        isMonsterDrawerTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterDrawerTapped ? monstersDrawer[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
-                        
-                    }
+//
+//                // bed monster
+//
+//                Image(isMonsterBedTapped ? monstersBed[Int.random(in: 0..<3)] : "Sombra")
+//                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.95)
+//                    .onTapGesture(perform: {
+//                        isMonsterBedTapped.toggle()
+//                    })
+//
+//
+//                // shelf monster
+//                Button(action: {
+//                    isMonsterShelfTapped.toggle()
+//
+//                }) {
+//                    Image(isMonsterShelfTapped ? monstersShelf[Int.random(in: 0..<3)] : "Sombra")
+//                        .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.42)
+//
+//                }
+//
+//                // table monster
+//                Button(action: {
+//                    isMonsterTableTapped.toggle()
+//
+//                }) {
+//                    Image(isMonsterTableTapped ? monstersTable[Int.random(in: 0..<3)] : "Sombra")
+//                        .position(x: geometry.size.width * 0.7, y: geometry.size.height * 0.98)
+//
+//                }
+//
+//                // closet monster
+//                Button(action: {
+//                    isMonsterClosetTapped.toggle()
+//
+//                }) {
+//                    Image(isMonsterClosetTapped ? monstersCloset[Int.random(in: 0..<3)] : "Sombra")
+//                        .position(x: geometry.size.width * 0.9, y: geometry.size.height * 0.3)
+//
+//                }
+//
+//                // drawer monster
+//                Button(action: {
+//                    isMonsterDrawerTapped.toggle()
+//
+//                }) {
+//                    Image(isMonsterDrawerTapped ? monstersDrawer[Int.random(in: 0..<3)] : "Sombra")
+//                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
+//
+//                }
                 
                 
                 
