@@ -11,7 +11,6 @@ import SpriteKit
 
 struct RoomGameView: View {
     
-    @Binding var isPresenting: Bool
     @Environment(\.dismiss) private var dismiss
     
     var scene: GameScene {
@@ -33,14 +32,27 @@ struct RoomGameView: View {
             SpriteView(scene: scene)
                 .frame(width: geometry.size.width, height: geometry.size.height)
             
-
-        }.edgesIgnoringSafeArea(.all)
+            Image("home botao")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
+                .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
+                .onTapGesture {
+                    dismiss()
+                }
+            
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct RoomGameView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomGameView(isPresenting: .constant(true))
+        RoomGameView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

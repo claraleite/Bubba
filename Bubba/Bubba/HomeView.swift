@@ -14,37 +14,25 @@ struct HomeView: View {
     
     var body: some View {
         
-        NavigationView {
+        GeometryReader { geometry in
+        
+        NavigationStack {
             
-            ZStack {
-                
-                NavigationLink(destination: RoomHomeView(isPresenting: $isPresentingRoomView), isActive: $isPresentingRoomView) {
+                ZStack {
                     
-                    EmptyView()
+                    DefaultBackground(imageName: "Início")
                     
-                }.isDetailLink(false)
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
-                
-                DefaultBackground(imageName: "Início")
-                
-                VStack {
-                    Image("Quarto-casa")
+                    VStack {
                         
-                    
-                    Text("Quarto da Bubba")
-                    
-
-                }.contentShape(Rectangle())
-                    .onTapGesture {
-                        isPresentingRoomView = true
+                        DefaultNavigationButton(icon: Image("Quarto-casa"), nextView: RoomHomeView(), width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
+                        
                     }
-                                
-                
+                    
+                }
             }
             
-        }.navigationViewStyle(StackNavigationViewStyle())
+            
+        }
     }
 }
 
