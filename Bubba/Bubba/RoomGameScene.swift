@@ -25,14 +25,14 @@ class GameScene: SKScene {
         
         addChild(background)
         
-        sideMonster.size = CGSize(width: 150, height: 300)
-        sideMonster.position = CGPoint(x: 720, y: 300)
+        sideMonster.size = CGSize(width: self.size.width * 0.15, height: self.size.height * 0.4)
+        sideMonster.position = CGPoint(x: self.size.width * 0.66, y: self.size.height * 0.4)
         sideMonster.isUserInteractionEnabled = true
         
         addChild(sideMonster)
         
-        closetMonster.size = CGSize(width: 150, height: 150)
-        closetMonster.position = CGPoint(x: 800, y: 650)
+        closetMonster.size = CGSize(width: self.size.width * 0.15, height: self.size.height * 0.25)
+        closetMonster.position = CGPoint(x: self.size.width * 0.75, y: self.size.height * 0.83)
         closetMonster.isUserInteractionEnabled = true
         
         addChild(closetMonster)
