@@ -9,13 +9,13 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    let closetMonster = TouchSpriteNode(imageNamed: "monstro-armario-1")
-    let bedMonster = TouchSpriteNode(imageNamed: "monstro-cama-1")
-    let shelfMonster = TouchSpriteNode(imageNamed: "monstro-prateleira-1")
-    let tableMonster = TouchSpriteNode(imageNamed: "monstro-mesa-1")
-    let drawerMonster = TouchSpriteNode(imageNamed: "monstro-comoda-1")
+    let sideMonster = TouchSpriteNode(imageNamed: "sombra 1")
+    let closetMonster = TouchSpriteNode(imageNamed: "sombra 2")
+    let shelfMonster = TouchSpriteNode(imageNamed: "sombra 3")
+    let drawerMonster = TouchSpriteNode(imageNamed: "sombra 4")
+    let bedMonster = TouchSpriteNode(imageNamed: "sombra 5")
 
-    let background = SKSpriteNode(imageNamed: "Quarto-mini-game")
+    let background = SKSpriteNode(imageNamed: "bubba quarto escuro")
     
     override func didMove(to view: SKView) {
         
@@ -25,35 +25,35 @@ class GameScene: SKScene {
         
         addChild(background)
         
-        closetMonster.size = CGSize(width: 50, height: 50)
-        closetMonster.position = CGPoint(x: 1000, y: 550)
+        sideMonster.size = CGSize(width: 150, height: 300)
+        sideMonster.position = CGPoint(x: 720, y: 300)
+        sideMonster.isUserInteractionEnabled = true
+        
+        addChild(sideMonster)
+        
+        closetMonster.size = CGSize(width: 150, height: 150)
+        closetMonster.position = CGPoint(x: 800, y: 650)
         closetMonster.isUserInteractionEnabled = true
         
         addChild(closetMonster)
         
-        bedMonster.size = CGSize(width: 50, height: 50)
-        bedMonster.position = CGPoint(x: 300, y: 30)
-        bedMonster.isUserInteractionEnabled = true
-        
-        addChild(bedMonster)
-        
-        shelfMonster.size = CGSize(width: 50, height: 50)
-        shelfMonster.position = CGPoint(x: 400, y: 400)
+        shelfMonster.size = CGSize(width: 120, height: 120)
+        shelfMonster.position = CGPoint(x: 320, y: 620)
         shelfMonster.isUserInteractionEnabled = true
         
         addChild(shelfMonster)
         
-        tableMonster.size = CGSize(width: 50, height: 50)
-        tableMonster.position = CGPoint(x: 800, y: 300)
-        tableMonster.isUserInteractionEnabled = true
-        
-        addChild(tableMonster)
-        
-        drawerMonster.size = CGSize(width: 50, height: 50)
-        drawerMonster.position = CGPoint(x: 550, y: 200)
+        drawerMonster.size = CGSize(width: 120, height: 120)
+        drawerMonster.position = CGPoint(x: 350, y: 410)
         drawerMonster.isUserInteractionEnabled = true
         
         addChild(drawerMonster)
+        
+        bedMonster.size = CGSize(width: 160, height: 120)
+        bedMonster.position = CGPoint(x: 150, y: 30)
+        bedMonster.isUserInteractionEnabled = true
+        
+        addChild(bedMonster)
     }
     
     //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
