@@ -24,7 +24,6 @@ struct DefaultNavigationButton: View {
                     .frame(width: width, height: height)
             }
         )
-        .isDetailLink(false)
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
