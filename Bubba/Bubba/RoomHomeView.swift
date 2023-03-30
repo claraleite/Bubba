@@ -9,10 +9,7 @@ import SwiftUI
 
 struct RoomHomeView: View {
     
-    @Binding var isPresenting: Bool
     @Environment(\.dismiss) private var dismiss
-    
-    @State var isPresentingRoomGameView: Bool = false
     
     @State var isDark: Bool = false
     @State private var shouldAnimate = false
@@ -23,14 +20,6 @@ struct RoomHomeView: View {
             
             ZStack {
                 
-                NavigationLink(destination: RoomGameView(isPresenting: $isPresentingRoomGameView), isActive: $isPresentingRoomGameView) {
-                    
-                    EmptyView()
-                    
-                }.isDetailLink(false)
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
                 
                 DefaultBackground(imageName: isDark ? "bubba quarto escuro" : "bubba quarto")
                 
@@ -43,15 +32,17 @@ struct RoomHomeView: View {
                 
                 VStack {
                     
-                    Image(isDark ? "Popup-play" : "")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
-                        .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            isPresentingRoomGameView = true
-                        }
+                    if isDark {
+                        DefaultNavigationButton(icon: Image(isDark ? "Popup-play" : ""), nextView: RoomGameView(), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                            .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
+                        
+                    } else {
+                        Image(isDark ? "Popup-play" : "")
+                            .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                            .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
+                        
+                    }
+                    
                     
                     Image(isDark ? "interruptor escuro" : "interruptor")
                         .resizable()
@@ -69,11 +60,22 @@ struct RoomHomeView: View {
                                 shouldAnimate = false
                             }
                         }
-                        
-                        
+                    
+                    
+                    
                     
                     
                 }
+                
+                Image("home botao")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
+                    .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
+                    .onTapGesture {
+                        dismiss()
+                    }
+                
                 
                 
                 
@@ -82,12 +84,16 @@ struct RoomHomeView: View {
                 
             }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        
     }
 }
-    
+
 struct RoomHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomHomeView(isPresenting: .constant(true))
+        RoomHomeView()
             .previewInterfaceOrientation(.landscapeLeft)
         
     }

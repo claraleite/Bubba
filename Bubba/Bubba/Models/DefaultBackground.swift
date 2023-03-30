@@ -15,7 +15,7 @@ struct DefaultBackground: View {
     var body: some View {
         Image(imageName)
             .resizable()
-            .aspectRatio(contentMode: .fill)
+            .frame(maxHeight: .infinity)
             .ignoresSafeArea(.all, edges: .all)
         
     }
