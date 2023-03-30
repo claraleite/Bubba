@@ -9,6 +9,11 @@ import SwiftUI
 
 struct RoomHomeView: View {
     
+    @Binding var isPresenting: Bool
+    @Environment(\.dismiss) private var dismiss
+    
+    @State var isPresentingRoomGameView: Bool = false
+    
     @State var isDark: Bool = false
     @State private var shouldAnimate = false
     
@@ -18,38 +23,60 @@ struct RoomHomeView: View {
             
             ZStack {
                 
-                DefaultBackground(imageName: isDark ? "Quarto-escuro" : "Quarto")
+                NavigationLink(destination: RoomGameView(isPresenting: $isPresentingRoomGameView), isActive: $isPresentingRoomGameView) {
+                    
+                    EmptyView()
+                    
+                }.isDetailLink(false)
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                
+                DefaultBackground(imageName: isDark ? "bubba quarto escuro" : "bubba quarto")
+                
+                Image(isDark ? "bubba escura" : "bubba")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.4)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7)
                 
                 
                 VStack {
                     
-                    Button(action: {
+                    Image(isDark ? "Popup-play" : "")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                        .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            isPresentingRoomGameView = true
+                        }
+                    
+                    Image(isDark ? "interruptor escuro" : "interruptor")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.15, height: geometry.size.height * 0.15)
+                        .position(x: geometry.size.width * 0.61, y: geometry.size.height * 0)
+                        .onTapGesture {
+                            isDark.toggle()
+                        }
+                        .scaleEffect(shouldAnimate ? 1.09 : 1.05)
+                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
+                        .onAppear() {
+                            self.shouldAnimate = true
+                            if isDark == true {
+                                shouldAnimate = false
+                            }
+                        }
                         
-                    }) {
-                        Image(isDark ? "Popup-play" : "")
-                            .padding(.all)
-                            .offset(x: 0, y: -(geometry.size.height * 0.3))
-                    }
+                        
                     
                     
                 }
                 
-                Button(action: {
-                    withAnimation {
-                        isDark.toggle()
-                    }
-                    
-                    
-                }) {
-                    Image("Interruptor")
-                        .position(x: (geometry.size.width * 0.33), y: geometry.size.height * 0.63)
-                        .scaleEffect(shouldAnimate ? 1.1 : 1.05)
-                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true))
-                        .onAppear() {
-                            self.shouldAnimate = true
-                        }
-                    
-                }
+                
+                
                 
                 
                 
@@ -57,10 +84,10 @@ struct RoomHomeView: View {
         }
     }
 }
-
+    
 struct RoomHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomHomeView()
+        RoomHomeView(isPresenting: .constant(true))
             .previewInterfaceOrientation(.landscapeLeft)
         
     }

@@ -11,21 +11,14 @@ import SpriteKit
 
 struct RoomGameView: View {
     
-    var scene: SKScene {
+    @Binding var isPresenting: Bool
+    @Environment(\.dismiss) private var dismiss
+    
+    var scene: GameScene {
         let scene = GameScene()
-        scene.size = CGSize(width: 300, height: 300)
-        scene.scaleMode = .fill
-        
+        scene.scaleMode = .resizeFill
         return scene
     }
-    
-    
-    @State var isMonsterBedTapped: Bool = false
-    @State var isMonsterShelfTapped: Bool = false
-    @State var isMonsterTableTapped: Bool = false
-    @State var isMonsterClosetTapped: Bool = false
-    @State var isMonsterDrawerTapped: Bool = false
-    
     
     var monstersBed: [String] = ["monstro-cama-1", "monstro-cama-2", "monstro-cama-3"]
     var monstersTable: [String] = ["monstro-mesa-1", "monstro-mesa-2", "monstro-mesa-3"]
@@ -37,75 +30,17 @@ struct RoomGameView: View {
         
         GeometryReader { geometry in
             
-            ZStack {
-                
-                DefaultBackground(imageName: "Quarto-mini-game")
-                
-                SpriteView(scene: scene)
-                    .frame(width: 300, height: 300)
-                
-//
-//                // bed monster
-//
-//                Image(isMonsterBedTapped ? monstersBed[Int.random(in: 0..<3)] : "Sombra")
-//                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.95)
-//                    .onTapGesture(perform: {
-//                        isMonsterBedTapped.toggle()
-//                    })
-//
-//
-//                // shelf monster
-//                Button(action: {
-//                    isMonsterShelfTapped.toggle()
-//
-//                }) {
-//                    Image(isMonsterShelfTapped ? monstersShelf[Int.random(in: 0..<3)] : "Sombra")
-//                        .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.42)
-//
-//                }
-//
-//                // table monster
-//                Button(action: {
-//                    isMonsterTableTapped.toggle()
-//
-//                }) {
-//                    Image(isMonsterTableTapped ? monstersTable[Int.random(in: 0..<3)] : "Sombra")
-//                        .position(x: geometry.size.width * 0.7, y: geometry.size.height * 0.98)
-//
-//                }
-//
-//                // closet monster
-//                Button(action: {
-//                    isMonsterClosetTapped.toggle()
-//
-//                }) {
-//                    Image(isMonsterClosetTapped ? monstersCloset[Int.random(in: 0..<3)] : "Sombra")
-//                        .position(x: geometry.size.width * 0.9, y: geometry.size.height * 0.3)
-//
-//                }
-//
-//                // drawer monster
-//                Button(action: {
-//                    isMonsterDrawerTapped.toggle()
-//
-//                }) {
-//                    Image(isMonsterDrawerTapped ? monstersDrawer[Int.random(in: 0..<3)] : "Sombra")
-//                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
-//
-//                }
-                
-                
-                
-                
-                
-            }
-        }
+            SpriteView(scene: scene)
+                .frame(width: geometry.size.width, height: geometry.size.height)
+            
+
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
 struct RoomGameView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomGameView()
+        RoomGameView(isPresenting: .constant(true))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
