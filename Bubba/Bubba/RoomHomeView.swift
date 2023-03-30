@@ -23,7 +23,7 @@ struct RoomHomeView: View {
                 
                 DefaultBackground(imageName: isDark ? "bubba quarto escuro" : "bubba quarto")
                 
-                Image(isDark ? "bubba escura" : "bubba")
+                Image(isDark ? "bubba medo escura" : "bubba medo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.4)
@@ -44,7 +44,7 @@ struct RoomHomeView: View {
                     }
                     
                     
-                    Image(isDark ? "interruptor escuro" : "interruptor")
+                    Image(isDark ? "interruptor off" : "interruptor")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: geometry.size.width * 0.15, height: geometry.size.height * 0.15)
@@ -56,9 +56,7 @@ struct RoomHomeView: View {
                         .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
-                            if isDark == true {
-                                shouldAnimate = false
-                            }
+                            
                         }
                     
                     
