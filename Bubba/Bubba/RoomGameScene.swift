@@ -14,6 +14,15 @@ class GameScene: SKScene {
     let shelfMonster = TouchSpriteNode(imageNamed: "sombra 3")
     let drawerMonster = TouchSpriteNode(imageNamed: "sombra 4")
     let bedMonster = TouchSpriteNode(imageNamed: "sombra 5")
+    
+    //    let sideMonster = SKSpriteNode(imageNamed: "sombra 1")
+    //    let closetMonster = SKSpriteNode(imageNamed: "sombra 2")
+    //    let shelfMonster = SKSpriteNode(imageNamed: "sombra 3")
+    //    let drawerMonster = SKSpriteNode(imageNamed: "sombra 4")
+    //    let bedMonster = SKSpriteNode(imageNamed: "sombra 5")
+    
+    let testing = ObjectsSpriteNode(imageNamed: "bubba")
+    let testing2 = SKSpriteNode(imageNamed: "bubba medo")
 
     let background = SKSpriteNode(imageNamed: "bubba quarto escuro")
     
@@ -25,6 +34,18 @@ class GameScene: SKScene {
         
         addChild(background)
         
+        testing.size = CGSize(width: self.size.width * 0.2, height: self.size.height * 0.3)
+        testing.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.5)
+        testing.isUserInteractionEnabled = true
+        
+        addChild(testing)
+        
+//        testing2.size = CGSize(width: self.size.width * 0.2, height: self.size.height * 0.3)
+//        testing2.position = CGPoint(x: self.size.width * 0.5, y: self.size.height * 0.5)
+//        testing2.isUserInteractionEnabled = true
+//
+//        addChild(testing2)
+//
         sideMonster.size = CGSize(width: self.size.width * 0.15, height: self.size.height * 0.4)
         sideMonster.position = CGPoint(x: self.size.width * 0.66, y: self.size.height * 0.4)
         sideMonster.isUserInteractionEnabled = true
@@ -37,35 +58,25 @@ class GameScene: SKScene {
         
         addChild(closetMonster)
         
-        shelfMonster.size = CGSize(width: 120, height: 120)
-        shelfMonster.position = CGPoint(x: 320, y: 620)
+        shelfMonster.size = CGSize(width: self.size.width * 0.15, height: self.size.height * 0.15)
+        shelfMonster.position = CGPoint(x: self.size.width * 0.3, y: self.size.height * 0.78)
         shelfMonster.isUserInteractionEnabled = true
         
         addChild(shelfMonster)
         
-        drawerMonster.size = CGSize(width: 120, height: 120)
-        drawerMonster.position = CGPoint(x: 350, y: 410)
+        drawerMonster.size = CGSize(width: self.size.width * 0.12, height: self.size.height * 0.12)
+        drawerMonster.position = CGPoint(x: self.size.width * 0.32, y: self.size.height * 0.5)
         drawerMonster.isUserInteractionEnabled = true
         
         addChild(drawerMonster)
         
-        bedMonster.size = CGSize(width: 160, height: 120)
-        bedMonster.position = CGPoint(x: 150, y: 30)
+        bedMonster.size = CGSize(width: self.size.width * 0.20, height: self.size.height * 0.15)
+        bedMonster.position = CGPoint(x: self.size.width * 0.12, y: self.size.height * 0.05)
         bedMonster.isUserInteractionEnabled = true
         
         addChild(bedMonster)
     }
     
-    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //        for touch in touches {
-    //            let location = touch.location(in: self)
-    //            let touchedNode = atPoint(location)
-    //            if touchedNode.name == "square" {
-    //                square.color = .red
-    //            }
-    //        }
-    //
-    //    }
 }
 
 class TouchSpriteNode: SKSpriteNode {
@@ -79,7 +90,42 @@ class TouchSpriteNode: SKSpriteNode {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touched")
+    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //        print("touched")
+    //    }
+    
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        for touch in touches {
+//            let location = touch.location(in: self)
+//
+//            self.position = location
+//
+//        }
+//    }
+}
+
+class ObjectsSpriteNode: SKSpriteNode {
+    override var isUserInteractionEnabled: Bool {
+        set {
+            
+        }
+        get {
+            return true
+        }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            print("touched")
+            let location = touch.location(in: self)
+            self.position = location
+        }
+    }
+    
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        for touch in touches {
+//            let location = touch.location(in: self)
+//            self.position = location
+//        }
+//    }
 }
