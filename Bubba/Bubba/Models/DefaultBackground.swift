@@ -15,6 +15,7 @@ struct DefaultBackground: View {
     var body: some View {
         Image(imageName)
             .resizable()
+            .frame(maxHeight: .infinity)
             .ignoresSafeArea(.all, edges: .all)
         
     }

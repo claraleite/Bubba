@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */; };
 		C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35B29CB4268009A34AC /* BubbaApp.swift */; };
 		C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35D29CB4268009A34AC /* ContentView.swift */; };
 		C1EBA36029CB4269009A34AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EBA35F29CB4269009A34AC /* Assets.xcassets */; };
@@ -14,11 +15,19 @@
 		C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */; };
 		C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */; };
 		C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37329CC87A9009A34AC /* RoomGameView.swift */; };
+
 		EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B7D629CC7EB5001BD411 /* Garden.swift */; };
 		ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC175B429CB44090071CEEE /* GardenGame.swift */; };
+
+		C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */; };
+		C1EBA37829D326C0009A34AC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37729D326BF009A34AC /* HomeView.swift */; };
+		EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B7D629CC7EB5001BD411 /* Garden.swift */; };
+		ECC175B529CB44090071CEEE /* GardemGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC175B429CB44090071CEEE /* GardemGame.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationButton.swift; sourceTree = "<group>"; };
 		C1EBA35829CB4268009A34AC /* Bubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EBA35B29CB4268009A34AC /* BubbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbaApp.swift; sourceTree = "<group>"; };
 		C1EBA35D29CB4268009A34AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,8 +36,15 @@
 		C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHomeView.swift; sourceTree = "<group>"; };
 		C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackground.swift; sourceTree = "<group>"; };
 		C1EBA37329CC87A9009A34AC /* RoomGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameView.swift; sourceTree = "<group>"; };
+
 		EC70B7D629CC7EB5001BD411 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
 		ECC175B429CB44090071CEEE /* GardenGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGame.swift; sourceTree = "<group>"; };
+
+		C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameScene.swift; sourceTree = "<group>"; };
+		C1EBA37729D326BF009A34AC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC70B7D629CC7EB5001BD411 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		ECC175B429CB44090071CEEE /* GardemGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardemGame.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,8 @@
 				C1EBA35D29CB4268009A34AC /* ContentView.swift */,
 				C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */,
 				C1EBA37329CC87A9009A34AC /* RoomGameView.swift */,
+				C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */,
+				C1EBA37729D326BF009A34AC /* HomeView.swift */,
 				C1EBA35F29CB4269009A34AC /* Assets.xcassets */,
 				C1EBA36129CB4269009A34AC /* Preview Content */,
 			);
@@ -86,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */,
+				C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,11 +179,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EBA37829D326C0009A34AC /* HomeView.swift in Sources */,
 				EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */,
 				C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */,
 				C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */,
+
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+
+				C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardemGame.swift in Sources */,
+
 				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
+				C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */,
 				C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */,
 				C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */,
 			);

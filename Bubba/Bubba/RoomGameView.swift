@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SpriteKit
+
 
 struct RoomGameView: View {
     
-    @State var isMonsterBedTapped: Bool = false
-    @State var isMonsterShelfTapped: Bool = false
-    @State var isMonsterTableTapped: Bool = false
-    @State var isMonsterClosetTapped: Bool = false
-    @State var isMonsterDrawerTapped: Bool = false
+    @Environment(\.dismiss) private var dismiss
     
+    var scene: GameScene {
+        let scene = GameScene()
+        scene.scaleMode = .resizeFill
+        return scene
+    }
     
     var monstersBed: [String] = ["monstro-cama-1", "monstro-cama-2", "monstro-cama-3"]
     var monstersTable: [String] = ["monstro-mesa-1", "monstro-mesa-2", "monstro-mesa-3"]
@@ -26,67 +29,24 @@ struct RoomGameView: View {
         
         GeometryReader { geometry in
             
-            ZStack {
-                
-                DefaultBackground(imageName: "Quarto-mini-game")
-                
-                
-                // bed monster
-                    Button(action: {
-                        isMonsterBedTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterBedTapped ? monstersBed[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.95)
-                        
-                    }
-                
-                // shelf monster
-                    Button(action: {
-                        isMonsterShelfTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterShelfTapped ? monstersShelf[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.42)
-                        
-                    }
-                
-                // table monster
-                    Button(action: {
-                        isMonsterTableTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterTableTapped ? monstersTable[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.7, y: geometry.size.height * 0.98)
-                        
-                    }
-
-                // closet monster
-                    Button(action: {
-                        isMonsterClosetTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterClosetTapped ? monstersCloset[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.9, y: geometry.size.height * 0.3)
-                        
-                    }
-                
-                // drawer monster
-                    Button(action: {
-                        isMonsterDrawerTapped.toggle()
-                        
-                    }) {
-                        Image(isMonsterDrawerTapped ? monstersDrawer[Int.random(in: 0..<3)] : "Sombra")
-                            .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
-                        
-                    }
-                
-                
-                
-                
-                
-            }
+            SpriteView(scene: scene)
+                .frame(width: geometry.size.width, height: geometry.size.height)
+            
+            Image("home botao")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
+                .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
+                .onTapGesture {
+                    dismiss()
+                }
+            
+            
         }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

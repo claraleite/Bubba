@@ -9,8 +9,13 @@ import SwiftUI
 
 struct RoomHomeView: View {
     
+    @Environment(\.dismiss) private var dismiss
+    
     @State var isDark: Bool = false
-    @State var switchWiggles = false
+    @State private var shouldAnimate = false
+    
+    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.5, y: UIScreen.main.bounds.height * 0.6)
+    @State var isDragging = false
     
     var body: some View {
         
@@ -18,44 +23,83 @@ struct RoomHomeView: View {
             
             ZStack {
                 
-                DefaultBackground(imageName: isDark ? "Quarto-escuro" : "Quarto")
+                DefaultBackground(imageName: isDark ? "bubba quarto escuro" : "bubba quarto")
                 
-                                
+                Image(isDark ? "bubba medo escura" : "bubba")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.4)
+                    .position(location)
+                    .gesture(
+                        DragGesture().onChanged { value in
+                            location = value.location
+                            isDragging = true
+                        }
+                            .onEnded { value in
+                                withAnimation(.spring()) {
+                                    isDragging = false
+                                    location = CGPoint(x: location.x, y: geometry.size.height * 0.7)
+                                }
+                            }
+                        )
+                
+                
                 VStack {
                     
-                    Button(action: {
+                    if isDark {
+                        DefaultNavigationButton(icon: Image(isDark ? "Popup-play" : ""), nextView: RoomGameView(), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                            .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
                         
-                    }) {
+                    } else {
                         Image(isDark ? "Popup-play" : "")
-                            .padding(.all)
-                            .offset(x: 0, y: -(geometry.size.height * 0.3))
+                            .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                            .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
+                        
                     }
+                    
+                    
+                    Image(isDark ? "interruptor off" : "interruptor")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.15, height: geometry.size.height * 0.15)
+                        .position(x: geometry.size.width * 0.61, y: geometry.size.height * 0)
+                        .onTapGesture {
+                            isDark.toggle()
+                        }
+                        .scaleEffect(shouldAnimate ? 1.09 : 1.05)
+                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
+                        .onAppear() {
+                            self.shouldAnimate = true
+                            
+                        }
+                    
+                    
+                    
                     
                     
                 }
                 
-                Button(action: {
-                    withAnimation {
-                        isDark.toggle()
+                Image("home botao")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
+                    .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
+                    .onTapGesture {
+                        dismiss()
                     }
-                    
-                    
-                }) {
-                    Image("Interruptor")
-                        .position(x: (geometry.size.width * 0.33), y: geometry.size.height * 0.63)
-                        .rotationEffect(.degrees(switchWiggles ? 1.0 : 0))
-                        .rotation3DEffect(.degrees(1.0), axis: (x: 0, y: 5, z: 0))
-                        .animation(Animation.easeInOut(duration: 0.15).repeatForever(), value: switchWiggles)
-                        .onAppear() {
-                            switchWiggles.toggle()
-                        }
-
-                }
-
+                
+                
+                
+                
+                
                 
                 
             }
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        
     }
 }
 
