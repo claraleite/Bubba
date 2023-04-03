@@ -29,9 +29,12 @@ struct RoomGameView: View {
         
         GeometryReader { geometry in
             
-            SpriteView(scene: scene)
-                .frame(width: geometry.size.width, height: geometry.size.height)
+//            SpriteView(scene: scene)
+//                .frame(width: geometry.size.width, height: geometry.size.height)
             
+            DefaultBackground(imageName: "bubba quarto escuro")
+                .frame(width: geometry.size.width, height: geometry.size.height)
+
             Image("home botao")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -41,6 +44,13 @@ struct RoomGameView: View {
                     dismiss()
                 }
             
+            HStack {
+                DraggingObject(imageName: "bubba", width: 120, height: 120)
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5)
+
+
+
+            }
             
         }
         .edgesIgnoringSafeArea(.all)
