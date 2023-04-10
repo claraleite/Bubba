@@ -19,14 +19,21 @@ struct HomeView: View {
         NavigationStack {
             
                 ZStack {
-                    
-                    DefaultBackground(imageName: "Início")
-                    
-                    VStack {
+                                        
+                    VStack(spacing: 0) {
+                        HStack(spacing: 0) {
+                            DefaultBackground(imageName: "home-dividida-01")
+                            HomeButton(icon: Image("home-dividida-02"), nextView: RoomHomeView())
+                            DefaultBackground(imageName: "home-dividida-03")
+                        }
                         
-                        DefaultNavigationButton(icon: Image("Quarto-casa"), nextView: RoomHomeView(), width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
-                        
+                        HStack(spacing: 0) {
+                            DefaultBackground(imageName: "home-dividida-04")
+                            DefaultBackground(imageName: "home-dividida-05")
+                            HomeButton(icon: Image("home-dividida-06"), nextView: Garden())
+                        }
                     }
+                    
                     
                 }
             }
