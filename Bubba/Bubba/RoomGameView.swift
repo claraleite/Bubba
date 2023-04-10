@@ -30,9 +30,8 @@ struct RoomGameView: View {
         GeometryReader { geometry in
             
             DefaultBackground(imageName: "bubba quarto escuro")
-                .frame(width: geometry.size.width, height: geometry.size.height)
             
-            Image("home botao")
+            Image("btn close")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
