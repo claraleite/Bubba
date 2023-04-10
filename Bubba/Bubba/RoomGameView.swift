@@ -12,12 +12,12 @@ import SpriteKit
 struct RoomGameView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @State var isConnected: Bool = false
     
-    var scene: GameScene {
-        let scene = GameScene()
-        scene.scaleMode = .resizeFill
-        return scene
-    }
+    @State var draggedObject: String
+    
+    @State private var borderColor: Color = .black
+    @State private var borderWidth: CGFloat = 1.0
     
     var monstersBed: [String] = ["monstro-cama-1", "monstro-cama-2", "monstro-cama-3"]
     var monstersTable: [String] = ["monstro-mesa-1", "monstro-mesa-2", "monstro-mesa-3"]
@@ -29,12 +29,9 @@ struct RoomGameView: View {
         
         GeometryReader { geometry in
             
-//            SpriteView(scene: scene)
-//                .frame(width: geometry.size.width, height: geometry.size.height)
-            
             DefaultBackground(imageName: "bubba quarto escuro")
                 .frame(width: geometry.size.width, height: geometry.size.height)
-
+            
             Image("home botao")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -44,13 +41,37 @@ struct RoomGameView: View {
                     dismiss()
                 }
             
-            HStack {
-                DraggingObject(imageName: "bubba", width: 120, height: 120)
-                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5)
-
-
-
+            VStack {
+                
+                DraggingObject(dragObject: "bubba medo", width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
+                
+                VStack {
+                    if draggedObject != "" {
+                        DraggingObject(dragObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                    } else {
+                        Text("Drag and Drop a color here!")
+                            .foregroundColor(.white)
+                    }
+                }
+                .frame(width: 280, height: 220)
+                .background(Color.gray.opacity(0.25))
+                .border(borderColor, width: borderWidth)
+                .padding()
+                .dropDestination(for: String.self) { items, location in
+                    draggedObject = items.first ?? "bubba medo"
+                    print(location)
+                    print(draggedObject)
+                    return true
+                } isTargeted: { inDropArea in
+                    print("In drop area", inDropArea)
+                    borderColor = inDropArea ? .accentColor : .black
+                    borderWidth = inDropArea ? 10.0 : 1.0
+                    
+                }
             }
+                
+            
+        
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -60,9 +81,10 @@ struct RoomGameView: View {
     }
 }
 
+
 struct RoomGameView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomGameView()
+        RoomGameView(draggedObject: "")
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

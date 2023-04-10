@@ -47,7 +47,7 @@ struct RoomHomeView: View {
                 VStack {
                     
                     if isDark {
-                        DefaultNavigationButton(icon: Image(isDark ? "Popup-play" : ""), nextView: RoomGameView(), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                        DefaultNavigationButton(icon: Image(isDark ? "Popup-play" : ""), nextView: RoomGameView(draggedObject: ""), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
                             .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
                         
                     } else {
