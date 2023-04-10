@@ -178,8 +178,7 @@
 				C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */,
-
-				ECC175B529CB44090071CEEE /* GardemGame.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,

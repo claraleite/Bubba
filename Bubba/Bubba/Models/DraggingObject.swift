@@ -9,33 +9,26 @@ import SwiftUI
 
 struct DraggingObject: View {
     
-    @State var dragAmount = CGSize.zero
-    
-    let imageName: String
-    let width: CGFloat
-    let height: CGFloat
-    
+    var dragObject: String
+    var width: CGFloat
+    var height: CGFloat
+ 
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: width, height: height)
-            .offset(dragAmount)
-            .gesture(
-                DragGesture(coordinateSpace: .global)
-                    .onChanged {
-                        self.dragAmount = CGSize(width: $0.translation.width, height: -$0.translation.height)
-                    }
-                    .onEnded { _ in
-                        self.dragAmount = .zero
-                    }
-            )
-
+        ZStack {
+            
+            Image(dragObject)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: width, height: height)
+            
+ 
+        }
+        .draggable(dragObject)
     }
 }
 
-struct DraggingObject_Previews: PreviewProvider {
+struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        DraggingObject(imageName: "bubba", width: 120, height: 120)
+        DraggingObject(dragObject: "", width: 100, height: 100)
     }
 }
