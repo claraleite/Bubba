@@ -42,13 +42,18 @@ struct RoomGameView: View {
             
             VStack {
                 
-                DraggingObject(dragObject: "bubba medo", width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
+                HStack {
+                    
+                    DraggingObject(dragObject: "bubba medo", width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
+                    
+                    DraggingObject(dragObject: "bubba", width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
+                }
                 
                 VStack {
                     if draggedObject != "" {
                         DraggingObject(dragObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
                     } else {
-                        Text("Drag and Drop a color here!")
+                        Text("Coloque a Bubba aqui!")
                             .foregroundColor(.white)
                     }
                 }
@@ -57,16 +62,26 @@ struct RoomGameView: View {
                 .border(borderColor, width: borderWidth)
                 .padding()
                 .dropDestination(for: String.self) { items, location in
-                    draggedObject = items.first ?? "bubba medo"
-                    print(location)
-                    print(draggedObject)
+                    if items.first == "bubba" {
+                        draggedObject = items.first ?? "bubba medo"
+                        print(location)
+                        print(draggedObject)
+                        
+                    }
+                    
                     return true
+
+                    
                 } isTargeted: { inDropArea in
                     print("In drop area", inDropArea)
                     borderColor = inDropArea ? .accentColor : .black
                     borderWidth = inDropArea ? 10.0 : 1.0
                     
+                    
+                    
                 }
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
             }
                 
             

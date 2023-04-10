@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21029E440BF00070EB9 /* HomeButton.swift */; };
+		C133C21329E456D900070EB9 /* DroppableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21229E456D900070EB9 /* DroppableObject.swift */; };
 		C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC97129DB18B0007BA935 /* DraggingObject.swift */; };
 		C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */; };
 		C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35B29CB4268009A34AC /* BubbaApp.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		C133C21029E440BF00070EB9 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		C133C21229E456D900070EB9 /* DroppableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppableObject.swift; sourceTree = "<group>"; };
 		C17AC97129DB18B0007BA935 /* DraggingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggingObject.swift; sourceTree = "<group>"; };
 		C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationButton.swift; sourceTree = "<group>"; };
 		C1EBA35829CB4268009A34AC /* Bubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */,
 				C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */,
 				C133C21029E440BF00070EB9 /* HomeButton.swift */,
+				C133C21229E456D900070EB9 /* DroppableObject.swift */,
 				C17AC97129DB18B0007BA935 /* DraggingObject.swift */,
 			);
 			path = Models;
@@ -183,6 +186,7 @@
 				C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */,
+				C133C21329E456D900070EB9 /* DroppableObject.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
 				C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */,
