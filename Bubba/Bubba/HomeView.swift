@@ -22,15 +22,15 @@ struct HomeView: View {
                                         
                     VStack(spacing: 0) {
                         HStack(spacing: 0) {
-                            DefaultBackground(imageName: "home-dividida-01")
-                            HomeButton(icon: Image("home-dividida-02"), nextView: RoomHomeView())
-                            DefaultBackground(imageName: "home-dividida-03")
+                            DefaultBackground(imageName: "casa-02")
+                            HomeButton(icon: Image("casa-03"), nextView: RoomHomeView())
+                            DefaultBackground(imageName: "casa-04")
                         }
                         
                         HStack(spacing: 0) {
-                            DefaultBackground(imageName: "home-dividida-04")
-                            DefaultBackground(imageName: "home-dividida-05")
-                            HomeButton(icon: Image("home-dividida-06"), nextView: Garden())
+                            DefaultBackground(imageName: "casa-05")
+                            DefaultBackground(imageName: "casa-06")
+                            HomeButton(icon: Image("casa-07"), nextView: Garden())
                         }
                     }
                     
