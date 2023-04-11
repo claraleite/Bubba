@@ -13,6 +13,9 @@ struct Garden: View {
     @State private var buttonOffset = CGSize(width: -340, height: -20)
     @State private var buttonOpacity = 1.0
     
+    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.25, y: UIScreen.main.bounds.height * 0.7)
+    @State var isDragging = false
+    
     @Environment(\.dismiss) private var dismiss
     
     @State private var showingSheet = false
@@ -33,6 +36,24 @@ struct Garden: View {
                 Image("background garden")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
+                
+                Image("bubba")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.4)
+                    .position(location)
+                    .gesture(
+                        DragGesture().onChanged { value in
+                            location = value.location
+                            isDragging = true
+                        }
+                            .onEnded { value in
+                                withAnimation(.spring()) {
+                                    isDragging = false
+                                    location = CGPoint(x: location.x, y: geometry.size.height * 0.7)
+                                }
+                            }
+                        )
                 
                 VStack {
                     
