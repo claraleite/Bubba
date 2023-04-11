@@ -33,7 +33,7 @@ struct QuizCompletedView: View {
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea(.all)
                 
-                Image("btn home")
+                Image("btn close")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)

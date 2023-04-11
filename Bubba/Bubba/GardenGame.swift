@@ -11,32 +11,48 @@ struct GardenGameView: View {
     @ObservedObject var gameManagerVM: GameManagerVM
     
     @Binding var isPresenting: Bool
+    @Environment(\.dismiss) private var dismiss
+
     
     var body: some View {
-        ZStack {
+        
+        GeometryReader { geometry in
             
-            
-            if (gameManagerVM.model.quizCompleted) {
-                QuizCompletedView(gameManagerVM: gameManagerVM)
+            ZStack {
                 
-            } else {
-                ZStack{
-                    Image("GameBackground_Prancheta 1") 
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                
+                if (gameManagerVM.model.quizCompleted) {
+                    QuizCompletedView(gameManagerVM: gameManagerVM)
                     
-                    
-                    VStack {
+                } else {
+                    ZStack{
+                        Image("GameBackground_Prancheta 1") 
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .ignoresSafeArea(.all, edges: .all)
                         
-                        ReusableImage(image: gameManagerVM.model.quizModel.question)
+                        Image("btn close")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
+                            .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
+                            .onTapGesture {
+                                dismiss()
+                            }
                         
                         
-                        OptionsGridView(gameManagerVM: gameManagerVM)
-                        
-                        Spacer()
+                        VStack {
+                            
+                            ReusableImage(image: gameManagerVM.model.quizModel.question)
+                            
+                            
+                            OptionsGridView(gameManagerVM: gameManagerVM)
+                            
+                            Spacer()
+                        }
                     }
+                    
                 }
-                
             }
         }
     }
