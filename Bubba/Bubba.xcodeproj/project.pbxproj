@@ -21,6 +21,12 @@
 		C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */; };
 		C1EBA37829D326C0009A34AC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37729D326BF009A34AC /* HomeView.swift */; };
 		EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B7D629CC7EB5001BD411 /* Garden.swift */; };
+		ECA93A4529DDAB3200C7806E /* GameManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */; };
+		ECA93A4729DDAB8300C7806E /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4629DDAB8300C7806E /* QuizModel.swift */; };
+		ECA93A4A29DDABCF00C7806E /* ReusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4929DDABCF00C7806E /* ReusableText.swift */; };
+		ECA93A4C29DDABE800C7806E /* ReusableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4B29DDABE800C7806E /* ReusableImage.swift */; };
+		ECA93A4E29DDAC0700C7806E /* OptionsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */; };
+		ECA93A5029DDAC6000C7806E /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */; };
 		ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC175B429CB44090071CEEE /* GardenGame.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,12 @@
 		C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameScene.swift; sourceTree = "<group>"; };
 		C1EBA37729D326BF009A34AC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC70B7D629CC7EB5001BD411 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerVM.swift; sourceTree = "<group>"; };
+		ECA93A4629DDAB8300C7806E /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		ECA93A4929DDABCF00C7806E /* ReusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableText.swift; sourceTree = "<group>"; };
+		ECA93A4B29DDABE800C7806E /* ReusableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableImage.swift; sourceTree = "<group>"; };
+		ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsGridView.swift; sourceTree = "<group>"; };
+		ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
 		ECC175B429CB44090071CEEE /* GardenGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +85,8 @@
 		C1EBA35A29CB4268009A34AC /* Bubba */ = {
 			isa = PBXGroup;
 			children = (
+				ECA93A4829DDABAE00C7806E /* UIComponents */,
+				ECA93A4329DDAB0E00C7806E /* ViewModels */,
 				C1EBA37129CB465C009A34AC /* Models */,
 				C1EBA35B29CB4268009A34AC /* BubbaApp.swift */,
 				EC70B7D629CC7EB5001BD411 /* Garden.swift */,
@@ -101,11 +115,34 @@
 			children = (
 				C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */,
 				C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */,
+
+				ECA93A4629DDAB8300C7806E /* QuizModel.swift */,
+
 				C133C21029E440BF00070EB9 /* HomeButton.swift */,
 				C133C21429E58A8E00070EB9 /* DroppableObject.swift */,
 				C17AC97129DB18B0007BA935 /* DraggingObject.swift */,
+
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ECA93A4329DDAB0E00C7806E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ECA93A4829DDABAE00C7806E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ECA93A4929DDABCF00C7806E /* ReusableText.swift */,
+				ECA93A4B29DDABE800C7806E /* ReusableImage.swift */,
+				ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */,
+				ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,13 +221,23 @@
 				C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */,
+				ECA93A4529DDAB3200C7806E /* GameManagerVM.swift in Sources */,
+				ECA93A4729DDAB8300C7806E /* QuizModel.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+
+				ECA93A4A29DDABCF00C7806E /* ReusableText.swift in Sources */,
+				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
+				ECA93A5029DDAC6000C7806E /* QuizCompletedView.swift in Sources */,
+				ECA93A4C29DDABE800C7806E /* ReusableImage.swift in Sources */,
+
 				C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */,
 				C133C21529E58A8E00070EB9 /* DroppableObject.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
 				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
 				C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */,
+
 				C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */,
+				ECA93A4E29DDAC0700C7806E /* OptionsGridView.swift in Sources */,
 				C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */,
 				C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */,
 			);
