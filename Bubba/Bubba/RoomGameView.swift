@@ -19,11 +19,6 @@ struct RoomGameView: View {
     @State private var borderColor: Color = .black
     @State private var borderWidth: CGFloat = 1.0
     
-    var monstersBed: [String] = ["monstro-cama-1", "monstro-cama-2", "monstro-cama-3"]
-    var monstersTable: [String] = ["monstro-mesa-1", "monstro-mesa-2", "monstro-mesa-3"]
-    var monstersCloset: [String] = ["monstro-armario-1", "monstro-armario-2", "monstro-armario-3"]
-    var monstersShelf: [String] = ["monstro-prateleira-1", "monstro-prateleira-2", "monstro-prateleira-3"]
-    var monstersDrawer: [String] = ["monstro-comoda-1", "monstro-comoda-2", "monstro-comoda-3"]
     
     var body: some View {
         
@@ -42,31 +37,32 @@ struct RoomGameView: View {
             
             VStack {
                 
-                DraggingObject(dragObject: "bubba medo", width: geometry.size.width * 0.3, height: geometry.size.height * 0.3)
-                
-                VStack {
-                    if draggedObject != "" {
-                        DraggingObject(dragObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
-                    } else {
-                        Text("Drag and Drop a color here!")
-                            .foregroundColor(.white)
+                ZStack {
+                    
+                    Image("bg sombras")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width)
+                    
+                    HStack {
+                        DraggingObject(dragObject: "bola", width: geometry.size.width * 0.1, height: geometry.size.height * 0.1)
+                        DraggingObject(dragObject: "coelho", width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                        DraggingObject(dragObject: "walkie", width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
                     }
                 }
-                .frame(width: 280, height: 220)
-                .background(Color.gray.opacity(0.25))
-                .border(borderColor, width: borderWidth)
-                .padding()
-                .dropDestination(for: String.self) { items, location in
-                    draggedObject = items.first ?? "bubba medo"
-                    print(location)
-                    print(draggedObject)
-                    return true
-                } isTargeted: { inDropArea in
-                    print("In drop area", inDropArea)
-                    borderColor = inDropArea ? .accentColor : .black
-                    borderWidth = inDropArea ? 10.0 : 1.0
-                    
-                }
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.1, height: geometry.size.height * 0.1, nameOfShadow: "bola", shadowName: "sombra bola")
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5)
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2, nameOfShadow: "walkie", shadowName: "sombra walkie")
+                    .position(x: geometry.size.width * 0.25, y: -(geometry.size.height * 0.05))
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2, nameOfShadow: "coelho", shadowName: "sombra coelho")
+                    .position(x: geometry.size.width * 0.3)
+                
+               
+                
+               
             }
                 
             
