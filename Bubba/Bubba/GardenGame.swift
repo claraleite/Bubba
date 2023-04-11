@@ -9,12 +9,16 @@ import SwiftUI
 
 struct GardenGameView: View {
     @ObservedObject var gameManagerVM: GameManagerVM
+    
+    @Binding var isPresenting: Bool
+    
     var body: some View {
         ZStack {
             
             
             if (gameManagerVM.model.quizCompleted) {
                 QuizCompletedView(gameManagerVM: gameManagerVM)
+                
             } else {
                 ZStack{
                     Image("GameBackground_Prancheta 1") 
@@ -40,7 +44,7 @@ struct GardenGameView: View {
 
 struct GardemGame_Previews: PreviewProvider {
     static var previews: some View {
-        GardenGameView(gameManagerVM: GameManagerVM())
+        GardenGameView(gameManagerVM: GameManagerVM(), isPresenting: .constant(true))
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

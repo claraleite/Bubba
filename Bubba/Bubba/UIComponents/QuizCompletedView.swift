@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct QuizCompletedView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+
     var gameManagerVM: GameManagerVM
     
     var backgroundImage = ["AbelhaBackground",
@@ -35,6 +38,9 @@ struct QuizCompletedView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
                     .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
+                    .onTapGesture {
+                        dismiss()
+                    }
                 
                 if count == 0 {
                     Image("Abelhinhas")
@@ -182,24 +188,34 @@ struct QuizCompletedView: View {
                         self.currentBackgroundIndex = (self.currentBackgroundIndex + 1) % self.backgroundImage.count
                         count += 1
                         self.shouldAnimate = false
+                        
+                        if count > 6 {
+                            dismiss()
+                        }
+                        
                     }) {
                         Image("btn direita")
                             
                     }
                         .offset(x: geometry.size.width*0.4, y: -geometry.size.height*0.05)
                     
-                    
-                    Button(action: {
-                        self.currentBackgroundIndex = (self.currentBackgroundIndex - 1) % self.backgroundImage.count
-                        count -= 1
-                        self.shouldAnimate = false
-                    }) {
-                        Image("btn esquerda")
-                            
+                    if count > 0 {
+                        Button(action: {
+                            self.currentBackgroundIndex = (self.currentBackgroundIndex - 1) % self.backgroundImage.count
+                            count -= 1
+                            self.shouldAnimate = false
+                        }) {
+                            Image("btn esquerda")
+                                
+                        }
+                            .offset(x: -geometry.size.width*0.4, y: -geometry.size.height*0.05)
                     }
-                        .offset(x: -geometry.size.width*0.4, y: -geometry.size.height*0.05)
+                    
+                    
                     
                 }
+                
+                
                 
                 
                 
