@@ -10,7 +10,7 @@ import SwiftUI
 struct Garden: View {
     @State private var shouldAnimate = false
     @State private var playAnimation : Bool = false
-    @State private var buttonOffset = CGSize(width: -340, height: -20)
+    @State private var buttonOffset = CGSize(width: -340, height: -400)
     @State private var buttonOpacity = 1.0
     
     @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.25, y: UIScreen.main.bounds.height * 0.7)
@@ -56,6 +56,16 @@ struct Garden: View {
                         )
                 
                 VStack {
+                    
+                    Image("popup-garden")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.3)
+                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
+                        .onTapGesture {
+                            showingSheet.toggle()
+                            
+                        }
                     
                     Button(action: {
                         showingSheet.toggle()

@@ -12,10 +12,12 @@ struct HomeView: View {
     @State var isPresentingRoomView: Bool = false
     @State var isPresentingGardenView: Bool = false
     
-    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.6, y: UIScreen.main.bounds.height * 0.75)
+    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.6, y: UIScreen.main.bounds.height * 0.5)
     @State var isDragging = false
     
     @State var shouldAnimate: Bool = false
+    
+    @State var showPopup: Bool = false
     
     var body: some View {
         
@@ -38,7 +40,16 @@ struct HomeView: View {
                             HomeButton(icon: Image("casa-07"), nextView: Garden())
                         }
                     }
-                
+                    
+                    VStack {
+                        
+                        Image(showPopup ? "popup-home-1" : "")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+//                            .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
+//
+                        
                         
                         Image("bubba")
                             .resizable()
@@ -55,14 +66,24 @@ struct HomeView: View {
                                 DragGesture().onChanged { value in
                                     location = value.location
                                     isDragging = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        showPopup = true
+                                    }
                                 }
                                     .onEnded { value in
                                         withAnimation(.spring()) {
                                             isDragging = false
-                                            location = CGPoint(x: location.x, y: geometry.size.height * 0.8)
+                                            location = CGPoint(x: location.x, y: geometry.size.height * 0.5)
                                         }
                                     }
-                                )
+                            )
+                            .onTapGesture {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    showPopup = true
+                                }
+                            }
+                        
+                    }
                     
                     
                 }
