@@ -12,27 +12,21 @@ import SpriteKit
 struct RoomGameView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @State var isConnected: Bool = false
     
-    var scene: GameScene {
-        let scene = GameScene()
-        scene.scaleMode = .resizeFill
-        return scene
-    }
+    @State var draggedObject: String
     
-    var monstersBed: [String] = ["monstro-cama-1", "monstro-cama-2", "monstro-cama-3"]
-    var monstersTable: [String] = ["monstro-mesa-1", "monstro-mesa-2", "monstro-mesa-3"]
-    var monstersCloset: [String] = ["monstro-armario-1", "monstro-armario-2", "monstro-armario-3"]
-    var monstersShelf: [String] = ["monstro-prateleira-1", "monstro-prateleira-2", "monstro-prateleira-3"]
-    var monstersDrawer: [String] = ["monstro-comoda-1", "monstro-comoda-2", "monstro-comoda-3"]
+    @State private var borderColor: Color = .black
+    @State private var borderWidth: CGFloat = 1.0
+    
     
     var body: some View {
         
         GeometryReader { geometry in
             
-            SpriteView(scene: scene)
-                .frame(width: geometry.size.width, height: geometry.size.height)
+            DefaultBackground(imageName: "bubba quarto escuro")
             
-            Image("home botao")
+            Image("btn close")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
@@ -41,6 +35,38 @@ struct RoomGameView: View {
                     dismiss()
                 }
             
+            VStack {
+                
+                ZStack {
+                    
+                    Image("bg sombras")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width)
+                    
+                    HStack {
+                        DraggingObject(dragObject: "bola", width: geometry.size.width * 0.1, height: geometry.size.height * 0.1)
+                        DraggingObject(dragObject: "coelho", width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                        DraggingObject(dragObject: "walkie", width: geometry.size.width * 0.2, height: geometry.size.height * 0.2)
+                    }
+                }
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.1, height: geometry.size.height * 0.1, nameOfShadow: "bola", shadowName: "sombra bola")
+                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5)
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2, nameOfShadow: "walkie", shadowName: "sombra walkie")
+                    .position(x: geometry.size.width * 0.25, y: -(geometry.size.height * 0.05))
+                
+                DroppableObject(draggedObject: draggedObject, width: geometry.size.width * 0.2, height: geometry.size.height * 0.2, nameOfShadow: "coelho", shadowName: "sombra coelho")
+                    .position(x: geometry.size.width * 0.3)
+                
+               
+                
+               
+            }
+                
+            
+        
             
         }
         .edgesIgnoringSafeArea(.all)
@@ -50,9 +76,10 @@ struct RoomGameView: View {
     }
 }
 
+
 struct RoomGameView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomGameView()
+        RoomGameView(draggedObject: "")
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

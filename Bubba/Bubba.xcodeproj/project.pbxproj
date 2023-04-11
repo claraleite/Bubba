@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21029E440BF00070EB9 /* HomeButton.swift */; };
+		C133C21529E58A8E00070EB9 /* DroppableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21429E58A8E00070EB9 /* DroppableObject.swift */; };
+		C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC97129DB18B0007BA935 /* DraggingObject.swift */; };
 		C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */; };
 		C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35B29CB4268009A34AC /* BubbaApp.swift */; };
 		C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35D29CB4268009A34AC /* ContentView.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C133C21029E440BF00070EB9 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		C133C21429E58A8E00070EB9 /* DroppableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppableObject.swift; sourceTree = "<group>"; };
+		C17AC97129DB18B0007BA935 /* DraggingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggingObject.swift; sourceTree = "<group>"; };
 		C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationButton.swift; sourceTree = "<group>"; };
 		C1EBA35829CB4268009A34AC /* Bubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EBA35B29CB4268009A34AC /* BubbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbaApp.swift; sourceTree = "<group>"; };
@@ -109,7 +115,13 @@
 			children = (
 				C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */,
 				C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */,
+
 				ECA93A4629DDAB8300C7806E /* QuizModel.swift */,
+
+				C133C21029E440BF00070EB9 /* HomeButton.swift */,
+				C133C21429E58A8E00070EB9 /* DroppableObject.swift */,
+				C17AC97129DB18B0007BA935 /* DraggingObject.swift */,
+
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,10 +224,18 @@
 				ECA93A4529DDAB3200C7806E /* GameManagerVM.swift in Sources */,
 				ECA93A4729DDAB8300C7806E /* QuizModel.swift in Sources */,
 				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+
 				ECA93A4A29DDABCF00C7806E /* ReusableText.swift in Sources */,
 				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
 				ECA93A5029DDAC6000C7806E /* QuizCompletedView.swift in Sources */,
 				ECA93A4C29DDABE800C7806E /* ReusableImage.swift in Sources */,
+
+				C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */,
+				C133C21529E58A8E00070EB9 /* DroppableObject.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
+				C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */,
+
 				C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */,
 				ECA93A4E29DDAC0700C7806E /* OptionsGridView.swift in Sources */,
 				C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */,

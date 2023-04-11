@@ -42,16 +42,17 @@ struct RoomHomeView: View {
                                 }
                             }
                         )
+                    .animation(.easeInOut(duration: 0.1), value: isDark)
                 
                 
                 VStack {
                     
                     if isDark {
-                        DefaultNavigationButton(icon: Image(isDark ? "Popup-play" : ""), nextView: RoomGameView(), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
+                        DefaultNavigationButton(icon: Image(isDark ? "popup-room" : ""), nextView: RoomGameView(draggedObject: ""), width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
                             .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
                         
                     } else {
-                        Image(isDark ? "Popup-play" : "")
+                        Image(isDark ? "popup-room" : "")
                             .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.25)
                             .position(x: geometry.size.width * 0.5 , y: geometry.size.height * 0.16)
                         
@@ -79,7 +80,7 @@ struct RoomHomeView: View {
                     
                 }
                 
-                Image("home botao")
+                Image("btn home")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
