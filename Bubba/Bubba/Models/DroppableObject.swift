@@ -15,6 +15,8 @@ struct DroppableObject: View {
     
     var nameOfShadow: String
     
+    @State private var shouldAnimate = false
+    
     var shadowName: String
     
     var body: some View {
@@ -22,9 +24,15 @@ struct DroppableObject: View {
         VStack {
             if draggedObject != "" {
                 DraggingObject(dragObject: draggedObject, width: width, height: height)
+                    
             } else {
                 Image(shadowName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: width, height: height)
+                    
+                    
+                
             }
         }
         .dropDestination(for: String.self) { items, location in
@@ -32,6 +40,7 @@ struct DroppableObject: View {
             
             if items.first == nameOfShadow {
                 draggedObject = items.first ?? "walkie"
+                self.shouldAnimate = false
             }
             
             print(location)
@@ -41,11 +50,12 @@ struct DroppableObject: View {
             print("In drop area", inDropArea)
             
         }
+
     }
 }
 
 struct DroppableObject_Previews: PreviewProvider {
     static var previews: some View {
-        DroppableObject(draggedObject: "", width: 200, height: 200, nameOfShadow: "", shadowName: "")
+        DroppableObject(draggedObject: "", width: 100, height: 100, nameOfShadow: "", shadowName: "")
     }
 }
