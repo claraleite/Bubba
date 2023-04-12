@@ -18,6 +18,7 @@ class GameManagerVM : ObservableObject {
     
     @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
 
+
     
     func verifyAnswer(selectedOption: QuizOption) {
         for index in model.quizModel.optionsList.indices {
@@ -45,7 +46,6 @@ class GameManagerVM : ObservableObject {
                 }
                 
                 
-                
             } else {
                 model.quizModel.optionsList[index].isMatched = false
                 model.quizModel.optionsList[index].isSelected = true
@@ -53,9 +53,16 @@ class GameManagerVM : ObservableObject {
 
         }
         
+    } // Fim VerifyAnswer
+    func restartGame() {
+        GameManagerVM.currentIndex = 0
+        model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+//        self.start()
     }
-
 }
+
+
+
 
 extension GameManagerVM
 {

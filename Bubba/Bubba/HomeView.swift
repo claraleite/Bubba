@@ -37,7 +37,7 @@ struct HomeView: View {
                         HStack(spacing: 0) {
                             DefaultBackground(imageName: "casa-05")
                             DefaultBackground(imageName: "casa-06")
-                            HomeButton(icon: Image("casa-07"), nextView: Garden())
+                            HomeButton(icon: Image("casa-07"), nextView: Garden(gameManagerVM: GameManagerVM()))
                         }
                     }
                     
