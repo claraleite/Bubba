@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Garden: View {
+    var gameManagerVM: GameManagerVM
+
+    
     @State private var shouldAnimate = false
     @State private var playAnimation : Bool = false
     @State private var buttonOffset = CGSize(width: -340, height: -400)
@@ -64,12 +67,13 @@ struct Garden: View {
                         .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.2)
                         .onTapGesture {
                             showingSheet.toggle()
-                            
+                            gameManagerVM.restartGame()
                         }
                     
                     Button(action: {
                         showingSheet.toggle()
                         self.playAnimation = true
+                        gameManagerVM.restartGame()
                         withAnimation {
                             //                    buttonOffset = CGSize(width: 100000, height: 0.0)
                             //                    buttonOpacity = 0.0
@@ -146,7 +150,7 @@ struct Garden: View {
 
 struct Garden_Previews: PreviewProvider {
     static var previews: some View {
-        Garden()
+        Garden(gameManagerVM: GameManagerVM())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
