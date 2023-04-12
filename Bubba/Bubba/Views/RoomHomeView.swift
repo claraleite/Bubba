@@ -17,6 +17,8 @@ struct RoomHomeView: View {
     @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.5, y: UIScreen.main.bounds.height * 0.6)
     @State var isDragging = false
     
+    @State var count: Int = 0
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -66,7 +68,10 @@ struct RoomHomeView: View {
                         .position(x: geometry.size.width * 0.61, y: geometry.size.height * 0)
                         .onTapGesture {
                             isDark.toggle()
-                            playSound(sound: "quarto escuro")
+                            if count == 0 {
+                                playSound(sound: "quarto escuro")
+                            }
+                            count += 1
                         }
                         .scaleEffect(shouldAnimate ? 1.09 : 1.05)
                         .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
@@ -104,7 +109,11 @@ struct RoomHomeView: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .onAppear() {
-            playSound(sound: "quarto aceso")
+            isDark = false
+            if count == 0 {
+                playSound(sound: "quarto aceso")
+            }
+            
         }
         
     }

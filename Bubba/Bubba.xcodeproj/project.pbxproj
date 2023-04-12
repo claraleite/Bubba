@@ -134,38 +134,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C1EBA34F29CB4268009A34AC = {
+		C1D145B129E7306A0022498A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C1EBA35A29CB4268009A34AC /* Bubba */,
-				C1EBA35929CB4268009A34AC /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		C1EBA35929CB4268009A34AC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C1EBA35829CB4268009A34AC /* Bubba.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C1EBA35A29CB4268009A34AC /* Bubba */ = {
-			isa = PBXGroup;
-			children = (
-				ECA93A4829DDABAE00C7806E /* UIComponents */,
-				ECA93A4329DDAB0E00C7806E /* ViewModels */,
-				C1EBA37129CB465C009A34AC /* Models */,
-				C1EBA35B29CB4268009A34AC /* BubbaApp.swift */,
-				EC70B7D629CC7EB5001BD411 /* Garden.swift */,
-				C18F49B829E6EBD800F067C6 /* OnboardingView.swift */,
-				ECC175B429CB44090071CEEE /* GardenGame.swift */,
-				C1EBA35D29CB4268009A34AC /* ContentView.swift */,
-				C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */,
-				C1EBA37329CC87A9009A34AC /* RoomGameView.swift */,
-				C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */,
-				C1EBA37729D326BF009A34AC /* HomeView.swift */,
-				C1EBA35F29CB4269009A34AC /* Assets.xcassets */,
 				C1D1459329E6F3360022498A /* abelha.mp3 */,
 				C1D1459529E6F3360022498A /* aranha.mp3 */,
 				C1D1459129E6F3360022498A /* borboleta.mp3 */,
@@ -196,6 +167,51 @@
 				C125EC6A29E6E3F800CFAE3E /* quarto escuro.mp3 */,
 				C125EC6C29E6E3F900CFAE3E /* uihuu.mp3 */,
 				C125EC6429E6E3F800CFAE3E /* vamos brincar.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C1D145B229E730820022498A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC70B7D629CC7EB5001BD411 /* Garden.swift */,
+				C18F49B829E6EBD800F067C6 /* OnboardingView.swift */,
+				ECC175B429CB44090071CEEE /* GardenGame.swift */,
+				C1EBA35D29CB4268009A34AC /* ContentView.swift */,
+				C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */,
+				C1EBA37329CC87A9009A34AC /* RoomGameView.swift */,
+				C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */,
+				C1EBA37729D326BF009A34AC /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1EBA34F29CB4268009A34AC = {
+			isa = PBXGroup;
+			children = (
+				C1EBA35A29CB4268009A34AC /* Bubba */,
+				C1EBA35929CB4268009A34AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1EBA35929CB4268009A34AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1EBA35829CB4268009A34AC /* Bubba.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1EBA35A29CB4268009A34AC /* Bubba */ = {
+			isa = PBXGroup;
+			children = (
+				ECA93A4829DDABAE00C7806E /* UIComponents */,
+				ECA93A4329DDAB0E00C7806E /* ViewModels */,
+				C1EBA37129CB465C009A34AC /* Models */,
+				C1EBA35B29CB4268009A34AC /* BubbaApp.swift */,
+				C1D145B229E730820022498A /* Views */,
+				C1EBA35F29CB4269009A34AC /* Assets.xcassets */,
+				C1D145B129E7306A0022498A /* Sounds */,
 				C1EBA36129CB4269009A34AC /* Preview Content */,
 			);
 			path = Bubba;
