@@ -10,6 +10,7 @@ import SwiftUI
 struct ReusableImage: View {
     
     var image: String
+    var sound: String
     
     var body: some View {
         Image(image)
@@ -17,5 +18,8 @@ struct ReusableImage: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: 600)
 //            .background(Color.white)
+            .onAppear() {
+                playSound(sound: sound)
+            }
     }
 }

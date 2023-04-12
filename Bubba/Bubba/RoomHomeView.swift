@@ -66,6 +66,7 @@ struct RoomHomeView: View {
                         .position(x: geometry.size.width * 0.61, y: geometry.size.height * 0)
                         .onTapGesture {
                             isDark.toggle()
+                            playSound(sound: "quarto escuro")
                         }
                         .scaleEffect(shouldAnimate ? 1.09 : 1.05)
                         .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
@@ -87,6 +88,8 @@ struct RoomHomeView: View {
                     .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
                     .onTapGesture {
                         dismiss()
+                        playSound(sound: "vamos brincar")
+
                     }
                 
                 
@@ -100,6 +103,9 @@ struct RoomHomeView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .onAppear() {
+            playSound(sound: "quarto aceso")
+        }
         
     }
 }

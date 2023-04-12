@@ -41,6 +41,9 @@ struct DroppableObject: View {
             if items.first == nameOfShadow {
                 draggedObject = items.first ?? "walkie"
                 self.shouldAnimate = false
+                playSound(sound: "muito bem")
+            } else {
+                playSound(sound: "naonaonao")
             }
             
             print(location)
