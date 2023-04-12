@@ -38,6 +38,7 @@ struct GardenGameView: View {
                             .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
                             .onTapGesture {
                                 dismiss()
+                                playSound(sound: "vamos brincar")
                             }
                         
                         

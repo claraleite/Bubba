@@ -98,6 +98,53 @@ struct HomeView: View {
                         
                     }
                     
+//                    Image("borboleta rosa")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: geometry.size.width * 0.1)
+//                        .position(x: shouldAnimate ? geometry.size.width * 0.86 : geometry.size.width * 0.84, y: shouldAnimate ? geometry.size.height * 0.53 : geometry.size.height * 0.55)
+//                        .scaleEffect(shouldAnimate ? 1.07 : 1.05)
+//                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
+//                        .onAppear() {
+//                            self.shouldAnimate = true
+//
+//                        }
+                    
+                    Image("abelha")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.1)
+                        .position(x: shouldAnimate ? geometry.size.width * 0.88 : geometry.size.width * 0.9, y: shouldAnimate ? geometry.size.height * 0.63 : geometry.size.height * 0.65)
+                        .scaleEffect(shouldAnimate ? 1.07 : 1.05)
+                        .animation(Animation.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
+                        .onAppear() {
+                            self.shouldAnimate = true
+                            
+                        }
+                    
+                    Image("bola")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.05)
+                        .position(x: geometry.size.width * 0.5, y: shouldAnimate ? geometry.size.height * 0.4 : geometry.size.height * 0.45)
+                        .animation(.easeInOut(duration: 0.7).repeatForever(autoreverses: true), value: shouldAnimate)
+                        .onAppear() {
+                            self.shouldAnimate = true
+                            
+                        }
+//                    
+//                    Image("coelho")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: geometry.size.width * 0.05)
+//                        .position(x: geometry.size.width * 0.6, y: geometry.size.height * 0.4)
+//                        .rotationEffect(.degrees(shouldAnimate ? 2.5 : 0))
+//                        .rotation3DEffect(.degrees(1.0), axis: (x: 0, y: 5, z: 0))
+//                        .animation(Animation.easeInOut(duration: 0.15).repeatForever(), value: shouldAnimate)
+//                        .onAppear() {
+//                            shouldAnimate = true
+//                        }
+                    
                     
                 }
             

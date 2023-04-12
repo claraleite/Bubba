@@ -16,7 +16,7 @@ struct Garden: View {
     @State private var buttonOffset = CGSize(width: -340, height: -400)
     @State private var buttonOpacity = 1.0
     
-    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.25, y: UIScreen.main.bounds.height * 0.7)
+    @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.7, y: UIScreen.main.bounds.height * 0.7)
     @State var isDragging = false
     
 //    @Binding var endGame: Bool
@@ -47,7 +47,7 @@ struct Garden: View {
                 Image("bubba")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.4)
+                    .frame(width: geometry.size.width * 0.7, height: geometry.size.height * 0.4)
                     .position(location)
                     .gesture(
                         DragGesture().onChanged { value in
@@ -150,7 +150,7 @@ struct Garden: View {
             .onAppear() {
                 if playingSound == false {
                     playSound(sound: "jogo jardim")
-                }
+                } 
                 
             }
             

@@ -42,6 +42,7 @@ struct QuizCompletedView: View {
                     .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
                     .onTapGesture {
                         dismiss()
+                        playSound(sound: "vamos brincar")
                     }
                 
                 if count == 0 {
@@ -202,6 +203,8 @@ struct QuizCompletedView: View {
                         
                         if count > 6 {
                             dismiss()
+                            playSound(sound: "vamos brincar")
+                            
                         }
                         
                     }) {
