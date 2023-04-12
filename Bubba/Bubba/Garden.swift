@@ -19,9 +19,13 @@ struct Garden: View {
     @State private var location: CGPoint = CGPoint(x: UIScreen.main.bounds.width * 0.25, y: UIScreen.main.bounds.height * 0.7)
     @State var isDragging = false
     
+//    @Binding var endGame: Bool
+    
     @Environment(\.dismiss) private var dismiss
     
     @State private var showingSheet = false
+    
+    @State var playingSound: Bool = false
     
     var body: some View {
         
@@ -129,6 +133,7 @@ struct Garden: View {
                     .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
                     .onTapGesture {
                         dismiss()
+                        playSound(sound: "vamos brincar")
                     }
                 
                 
@@ -142,6 +147,12 @@ struct Garden: View {
                 GardenGameView(gameManagerVM: GameManagerVM(), isPresenting: $showingSheet)
                 
             })
+            .onAppear() {
+                if playingSound == false {
+                    playSound(sound: "jogo jardim")
+                }
+                
+            }
             
         }
         

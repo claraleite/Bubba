@@ -43,7 +43,7 @@ struct GardenGameView: View {
                         
                         VStack {
                             
-                            ReusableImage(image: gameManagerVM.model.quizModel.question)
+                            ReusableImage(image: gameManagerVM.model.quizModel.question, sound: gameManagerVM.model.quizModel.sound)
                             
                             
                             OptionsGridView(gameManagerVM: gameManagerVM)
@@ -53,6 +53,8 @@ struct GardenGameView: View {
                     }
                     
                 }
+            }.onAppear() {
+                playSound(sound: "vamos brincar")
             }
         }
     }

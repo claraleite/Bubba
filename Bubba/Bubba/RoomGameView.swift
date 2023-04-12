@@ -86,6 +86,9 @@ struct RoomGameView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .onAppear() {
+            playSound(sound: "jogo quarto")
+        }
     }
 }
 

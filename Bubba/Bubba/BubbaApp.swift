@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct BubbaApp: App {
+    
+    init() {
+        playSoundtrack(sound: "trilha-geral")
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeView()

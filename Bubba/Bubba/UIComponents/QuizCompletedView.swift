@@ -10,6 +10,8 @@ import SwiftUI
 struct QuizCompletedView: View {
     
     @Environment(\.dismiss) private var dismiss
+    
+    @State var showingSheet: Bool = false
 
     var gameManagerVM: GameManagerVM
     
@@ -37,7 +39,7 @@ struct QuizCompletedView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: geometry.size.width * 0.10, height: geometry.size.height * 0.10)
-                    .position(x: geometry.size.width * 0.08, y: geometry.size.height * 0.08)
+                    .position(x: geometry.size.width * 0.92, y: geometry.size.height * 0.08)
                     .onTapGesture {
                         dismiss()
                     }
@@ -50,6 +52,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut abelha")
                         }
                 } else if count == 1{
                     Image("Boboleta")
@@ -62,6 +65,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut borboleta")
                         }
                     Image("borboleta azul")
                         .resizable()
@@ -73,6 +77,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            
                         }
                     Image("borboleta laranja")
                         .resizable()
@@ -84,6 +89,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            
                         }
                     
                 } else if count == 2{
@@ -97,6 +103,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut caracol")
                         }
                     Image("Caracol-2")
                         .resizable()
@@ -121,6 +128,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut joaninha")
                         }
                 
                 } else if count == 4{
@@ -134,6 +142,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut minhoca")
                         }
                     
                 } else if count == 5{
@@ -147,6 +156,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut sapo")
                         }
                     Image("SapoNaPlanta")
                         .resizable()
@@ -181,6 +191,7 @@ struct QuizCompletedView: View {
                         .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: shouldAnimate)
                         .onAppear() {
                             self.shouldAnimate = true
+                            playSound(sound: "cut soldadinho")
                         }
                 }
                 HStack {
@@ -220,6 +231,10 @@ struct QuizCompletedView: View {
                 
                 
             }
+//            .fullScreenCover(isPresented: $showingSheet, content: {
+//                GardenEnding(isPresenting: $showingSheet)
+//                
+//            })
         }
         
             

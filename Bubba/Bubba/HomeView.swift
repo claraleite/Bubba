@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @AppStorage("_shouldShowOnboarding") var shouldShowOnboarding: Bool = true
+//    @State var shouldShowOnboarding: Bool = true
+    
     @State var isPresentingRoomView: Bool = false
     @State var isPresentingGardenView: Bool = false
     
@@ -18,6 +21,7 @@ struct HomeView: View {
     @State var shouldAnimate: Bool = false
     
     @State var showPopup: Bool = false
+    @State var soundPlaying: Bool = false
     
     var body: some View {
         
@@ -68,6 +72,11 @@ struct HomeView: View {
                                     isDragging = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                         showPopup = true
+                                        if soundPlaying == false {
+                                            playSound(sound: "home")
+                                            soundPlaying = true
+                                        }
+                                        
                                     }
                                 }
                                     .onEnded { value in
@@ -80,6 +89,10 @@ struct HomeView: View {
                             .onTapGesture {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     showPopup = true
+                                    if soundPlaying == false {
+                                        playSound(sound: "home")
+                                        soundPlaying = true
+                                    }
                                 }
                             }
                         
@@ -87,7 +100,13 @@ struct HomeView: View {
                     
                     
                 }
-            }
+            
+        }.fullScreenCover(isPresented: $shouldShowOnboarding, content:{ OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            
+        })
+        .onAppear() {
+            playSound(sound: "vamos brincar")
+        }
             
             
         }
