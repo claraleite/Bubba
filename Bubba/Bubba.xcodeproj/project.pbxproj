@@ -7,22 +7,124 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1E7F20E29C8A18600D63426 /* BubbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7F20D29C8A18600D63426 /* BubbaApp.swift */; };
-		C1E7F21029C8A18600D63426 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7F20F29C8A18600D63426 /* ContentView.swift */; };
-		C1E7F21229C8A18700D63426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E7F21129C8A18700D63426 /* Assets.xcassets */; };
-		C1E7F21529C8A18700D63426 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E7F21429C8A18700D63426 /* Preview Assets.xcassets */; };
+		C125EC6129E6D91600CFAE3E /* GardenEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EC6029E6D91600CFAE3E /* GardenEnding.swift */; };
+		C125EC6E29E6E3F900CFAE3E /* anan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6229E6E3F800CFAE3E /* anan.mp3 */; };
+		C125EC6F29E6E3F900CFAE3E /* jogo jardim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6329E6E3F800CFAE3E /* jogo jardim.mp3 */; };
+		C125EC7029E6E3F900CFAE3E /* vamos brincar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6429E6E3F800CFAE3E /* vamos brincar.mp3 */; };
+		C125EC7129E6E3F900CFAE3E /* quarto aceso.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6529E6E3F800CFAE3E /* quarto aceso.mp3 */; };
+		C125EC7229E6E3F900CFAE3E /* home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6629E6E3F800CFAE3E /* home.mp3 */; };
+		C125EC7329E6E3F900CFAE3E /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6729E6E3F800CFAE3E /* intro.mp3 */; };
+		C125EC7429E6E3F900CFAE3E /* muito bem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6829E6E3F800CFAE3E /* muito bem.mp3 */; };
+		C125EC7529E6E3F900CFAE3E /* jogo quarto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6929E6E3F800CFAE3E /* jogo quarto.mp3 */; };
+		C125EC7629E6E3F900CFAE3E /* quarto escuro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6A29E6E3F800CFAE3E /* quarto escuro.mp3 */; };
+		C125EC7729E6E3F900CFAE3E /* jogo quarto final.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6B29E6E3F900CFAE3E /* jogo quarto final.mp3 */; };
+		C125EC7829E6E3F900CFAE3E /* uihuu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6C29E6E3F900CFAE3E /* uihuu.mp3 */; };
+		C125EC7929E6E3F900CFAE3E /* naonaonao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC6D29E6E3F900CFAE3E /* naonaonao.mp3 */; };
+		C125EC7B29E6E40200CFAE3E /* trilha-geral.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C125EC7A29E6E40200CFAE3E /* trilha-geral.mp3 */; };
+		C125EC7D29E6E43700CFAE3E /* playSoundtrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EC7C29E6E43700CFAE3E /* playSoundtrack.swift */; };
+		C125EC7F29E6E4C100CFAE3E /* playSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125EC7E29E6E4C100CFAE3E /* playSound.swift */; };
+		C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21029E440BF00070EB9 /* HomeButton.swift */; };
+		C133C21529E58A8E00070EB9 /* DroppableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133C21429E58A8E00070EB9 /* DroppableObject.swift */; };
+		C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17AC97129DB18B0007BA935 /* DraggingObject.swift */; };
+		C18F49B929E6EBD800F067C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F49B829E6EBD800F067C6 /* OnboardingView.swift */; };
+		C1D145A029E6F3370022498A /* cut caracol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1458F29E6F3350022498A /* cut caracol.mp3 */; };
+		C1D145A129E6F3370022498A /* soldadinho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459029E6F3360022498A /* soldadinho.mp3 */; };
+		C1D145A229E6F3370022498A /* borboleta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459129E6F3360022498A /* borboleta.mp3 */; };
+		C1D145A329E6F3370022498A /* caracol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459229E6F3360022498A /* caracol.mp3 */; };
+		C1D145A429E6F3370022498A /* abelha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459329E6F3360022498A /* abelha.mp3 */; };
+		C1D145A529E6F3370022498A /* cut abelha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459429E6F3360022498A /* cut abelha.mp3 */; };
+		C1D145A629E6F3370022498A /* aranha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459529E6F3360022498A /* aranha.mp3 */; };
+		C1D145A729E6F3370022498A /* minhoca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459629E6F3360022498A /* minhoca.mp3 */; };
+		C1D145A829E6F3370022498A /* cut soldadinho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459729E6F3360022498A /* cut soldadinho.mp3 */; };
+		C1D145A929E6F3370022498A /* cut minhoca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459829E6F3360022498A /* cut minhoca.mp3 */; };
+		C1D145AA29E6F3370022498A /* sapo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459929E6F3360022498A /* sapo.mp3 */; };
+		C1D145AB29E6F3370022498A /* cut joaninha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459A29E6F3360022498A /* cut joaninha.mp3 */; };
+		C1D145AC29E6F3370022498A /* cut borboleta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459B29E6F3360022498A /* cut borboleta.mp3 */; };
+		C1D145AD29E6F3370022498A /* cut aranha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459C29E6F3360022498A /* cut aranha.mp3 */; };
+		C1D145AE29E6F3370022498A /* cut sapo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459D29E6F3360022498A /* cut sapo.mp3 */; };
+		C1D145AF29E6F3370022498A /* joaninha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459E29E6F3360022498A /* joaninha.mp3 */; };
+		C1D145B029E6F3370022498A /* jogo jardim final.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1459F29E6F3370022498A /* jogo jardim final.mp3 */; };
+		C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */; };
+		C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35B29CB4268009A34AC /* BubbaApp.swift */; };
+		C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA35D29CB4268009A34AC /* ContentView.swift */; };
+		C1EBA36029CB4269009A34AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EBA35F29CB4269009A34AC /* Assets.xcassets */; };
+		C1EBA36329CB4269009A34AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EBA36229CB4269009A34AC /* Preview Assets.xcassets */; };
+		C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */; };
+		C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */; };
+		C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37329CC87A9009A34AC /* RoomGameView.swift */; };
+		C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */; };
+		C1EBA37829D326C0009A34AC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EBA37729D326BF009A34AC /* HomeView.swift */; };
+		EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70B7D629CC7EB5001BD411 /* Garden.swift */; };
+		ECA93A4529DDAB3200C7806E /* GameManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */; };
+		ECA93A4729DDAB8300C7806E /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4629DDAB8300C7806E /* QuizModel.swift */; };
+		ECA93A4A29DDABCF00C7806E /* ReusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4929DDABCF00C7806E /* ReusableText.swift */; };
+		ECA93A4C29DDABE800C7806E /* ReusableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4B29DDABE800C7806E /* ReusableImage.swift */; };
+		ECA93A4E29DDAC0700C7806E /* OptionsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */; };
+		ECA93A5029DDAC6000C7806E /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */; };
+		ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC175B429CB44090071CEEE /* GardenGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C1E7F20A29C8A18600D63426 /* Bubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1E7F20D29C8A18600D63426 /* BubbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbaApp.swift; sourceTree = "<group>"; };
-		C1E7F20F29C8A18600D63426 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C1E7F21129C8A18700D63426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1E7F21429C8A18700D63426 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C125EC6029E6D91600CFAE3E /* GardenEnding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenEnding.swift; sourceTree = "<group>"; };
+		C125EC6229E6E3F800CFAE3E /* anan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anan.mp3; sourceTree = "<group>"; };
+		C125EC6329E6E3F800CFAE3E /* jogo jardim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jogo jardim.mp3"; sourceTree = "<group>"; };
+		C125EC6429E6E3F800CFAE3E /* vamos brincar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vamos brincar.mp3"; sourceTree = "<group>"; };
+		C125EC6529E6E3F800CFAE3E /* quarto aceso.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "quarto aceso.mp3"; sourceTree = "<group>"; };
+		C125EC6629E6E3F800CFAE3E /* home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = home.mp3; sourceTree = "<group>"; };
+		C125EC6729E6E3F800CFAE3E /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
+		C125EC6829E6E3F800CFAE3E /* muito bem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "muito bem.mp3"; sourceTree = "<group>"; };
+		C125EC6929E6E3F800CFAE3E /* jogo quarto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jogo quarto.mp3"; sourceTree = "<group>"; };
+		C125EC6A29E6E3F800CFAE3E /* quarto escuro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "quarto escuro.mp3"; sourceTree = "<group>"; };
+		C125EC6B29E6E3F900CFAE3E /* jogo quarto final.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jogo quarto final.mp3"; sourceTree = "<group>"; };
+		C125EC6C29E6E3F900CFAE3E /* uihuu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uihuu.mp3; sourceTree = "<group>"; };
+		C125EC6D29E6E3F900CFAE3E /* naonaonao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = naonaonao.mp3; sourceTree = "<group>"; };
+		C125EC7A29E6E40200CFAE3E /* trilha-geral.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "trilha-geral.mp3"; sourceTree = "<group>"; };
+		C125EC7C29E6E43700CFAE3E /* playSoundtrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playSoundtrack.swift; sourceTree = "<group>"; };
+		C125EC7E29E6E4C100CFAE3E /* playSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playSound.swift; sourceTree = "<group>"; };
+		C133C21029E440BF00070EB9 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		C133C21429E58A8E00070EB9 /* DroppableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppableObject.swift; sourceTree = "<group>"; };
+		C17AC97129DB18B0007BA935 /* DraggingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggingObject.swift; sourceTree = "<group>"; };
+		C18F49B829E6EBD800F067C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C1D1458F29E6F3350022498A /* cut caracol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut caracol.mp3"; sourceTree = "<group>"; };
+		C1D1459029E6F3360022498A /* soldadinho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soldadinho.mp3; sourceTree = "<group>"; };
+		C1D1459129E6F3360022498A /* borboleta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = borboleta.mp3; sourceTree = "<group>"; };
+		C1D1459229E6F3360022498A /* caracol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = caracol.mp3; sourceTree = "<group>"; };
+		C1D1459329E6F3360022498A /* abelha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = abelha.mp3; sourceTree = "<group>"; };
+		C1D1459429E6F3360022498A /* cut abelha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut abelha.mp3"; sourceTree = "<group>"; };
+		C1D1459529E6F3360022498A /* aranha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aranha.mp3; sourceTree = "<group>"; };
+		C1D1459629E6F3360022498A /* minhoca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = minhoca.mp3; sourceTree = "<group>"; };
+		C1D1459729E6F3360022498A /* cut soldadinho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut soldadinho.mp3"; sourceTree = "<group>"; };
+		C1D1459829E6F3360022498A /* cut minhoca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut minhoca.mp3"; sourceTree = "<group>"; };
+		C1D1459929E6F3360022498A /* sapo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sapo.mp3; sourceTree = "<group>"; };
+		C1D1459A29E6F3360022498A /* cut joaninha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut joaninha.mp3"; sourceTree = "<group>"; };
+		C1D1459B29E6F3360022498A /* cut borboleta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut borboleta.mp3"; sourceTree = "<group>"; };
+		C1D1459C29E6F3360022498A /* cut aranha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut aranha.mp3"; sourceTree = "<group>"; };
+		C1D1459D29E6F3360022498A /* cut sapo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cut sapo.mp3"; sourceTree = "<group>"; };
+		C1D1459E29E6F3360022498A /* joaninha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = joaninha.mp3; sourceTree = "<group>"; };
+		C1D1459F29E6F3370022498A /* jogo jardim final.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jogo jardim final.mp3"; sourceTree = "<group>"; };
+		C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationButton.swift; sourceTree = "<group>"; };
+		C1EBA35829CB4268009A34AC /* Bubba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubba.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EBA35B29CB4268009A34AC /* BubbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbaApp.swift; sourceTree = "<group>"; };
+		C1EBA35D29CB4268009A34AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1EBA35F29CB4269009A34AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1EBA36229CB4269009A34AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomHomeView.swift; sourceTree = "<group>"; };
+		C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBackground.swift; sourceTree = "<group>"; };
+		C1EBA37329CC87A9009A34AC /* RoomGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameView.swift; sourceTree = "<group>"; };
+		C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameScene.swift; sourceTree = "<group>"; };
+		C1EBA37729D326BF009A34AC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC70B7D629CC7EB5001BD411 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerVM.swift; sourceTree = "<group>"; };
+		ECA93A4629DDAB8300C7806E /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		ECA93A4929DDABCF00C7806E /* ReusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableText.swift; sourceTree = "<group>"; };
+		ECA93A4B29DDABE800C7806E /* ReusableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableImage.swift; sourceTree = "<group>"; };
+		ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsGridView.swift; sourceTree = "<group>"; };
+		ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
+		ECC175B429CB44090071CEEE /* GardenGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C1E7F20729C8A18600D63426 /* Frameworks */ = {
+		C1EBA35529CB4268009A34AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,51 +134,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C1E7F20129C8A18600D63426 = {
+		C1D145B129E7306A0022498A /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C1E7F20C29C8A18600D63426 /* Bubba */,
-				C1E7F20B29C8A18600D63426 /* Products */,
+				C1D1459329E6F3360022498A /* abelha.mp3 */,
+				C1D1459529E6F3360022498A /* aranha.mp3 */,
+				C1D1459129E6F3360022498A /* borboleta.mp3 */,
+				C1D1459229E6F3360022498A /* caracol.mp3 */,
+				C1D1459429E6F3360022498A /* cut abelha.mp3 */,
+				C1D1459C29E6F3360022498A /* cut aranha.mp3 */,
+				C1D1459B29E6F3360022498A /* cut borboleta.mp3 */,
+				C1D1458F29E6F3350022498A /* cut caracol.mp3 */,
+				C1D1459A29E6F3360022498A /* cut joaninha.mp3 */,
+				C1D1459829E6F3360022498A /* cut minhoca.mp3 */,
+				C1D1459D29E6F3360022498A /* cut sapo.mp3 */,
+				C1D1459729E6F3360022498A /* cut soldadinho.mp3 */,
+				C1D1459E29E6F3360022498A /* joaninha.mp3 */,
+				C1D1459F29E6F3370022498A /* jogo jardim final.mp3 */,
+				C1D1459629E6F3360022498A /* minhoca.mp3 */,
+				C1D1459929E6F3360022498A /* sapo.mp3 */,
+				C1D1459029E6F3360022498A /* soldadinho.mp3 */,
+				C125EC6229E6E3F800CFAE3E /* anan.mp3 */,
+				C125EC7A29E6E40200CFAE3E /* trilha-geral.mp3 */,
+				C125EC6629E6E3F800CFAE3E /* home.mp3 */,
+				C125EC6729E6E3F800CFAE3E /* intro.mp3 */,
+				C125EC6329E6E3F800CFAE3E /* jogo jardim.mp3 */,
+				C125EC6B29E6E3F900CFAE3E /* jogo quarto final.mp3 */,
+				C125EC6929E6E3F800CFAE3E /* jogo quarto.mp3 */,
+				C125EC6829E6E3F800CFAE3E /* muito bem.mp3 */,
+				C125EC6D29E6E3F900CFAE3E /* naonaonao.mp3 */,
+				C125EC6529E6E3F800CFAE3E /* quarto aceso.mp3 */,
+				C125EC6A29E6E3F800CFAE3E /* quarto escuro.mp3 */,
+				C125EC6C29E6E3F900CFAE3E /* uihuu.mp3 */,
+				C125EC6429E6E3F800CFAE3E /* vamos brincar.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C1D145B229E730820022498A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC70B7D629CC7EB5001BD411 /* Garden.swift */,
+				C18F49B829E6EBD800F067C6 /* OnboardingView.swift */,
+				ECC175B429CB44090071CEEE /* GardenGame.swift */,
+				C1EBA35D29CB4268009A34AC /* ContentView.swift */,
+				C1EBA36D29CB45AA009A34AC /* RoomHomeView.swift */,
+				C1EBA37329CC87A9009A34AC /* RoomGameView.swift */,
+				C1EBA37529CDDD18009A34AC /* RoomGameScene.swift */,
+				C1EBA37729D326BF009A34AC /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1EBA34F29CB4268009A34AC = {
+			isa = PBXGroup;
+			children = (
+				C1EBA35A29CB4268009A34AC /* Bubba */,
+				C1EBA35929CB4268009A34AC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C1E7F20B29C8A18600D63426 /* Products */ = {
+		C1EBA35929CB4268009A34AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1E7F20A29C8A18600D63426 /* Bubba.app */,
+				C1EBA35829CB4268009A34AC /* Bubba.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1E7F20C29C8A18600D63426 /* Bubba */ = {
+		C1EBA35A29CB4268009A34AC /* Bubba */ = {
 			isa = PBXGroup;
 			children = (
-				C1E7F20D29C8A18600D63426 /* BubbaApp.swift */,
-				C1E7F20F29C8A18600D63426 /* ContentView.swift */,
-				C1E7F21129C8A18700D63426 /* Assets.xcassets */,
-				C1E7F21329C8A18700D63426 /* Preview Content */,
+				ECA93A4829DDABAE00C7806E /* UIComponents */,
+				ECA93A4329DDAB0E00C7806E /* ViewModels */,
+				C1EBA37129CB465C009A34AC /* Models */,
+				C1EBA35B29CB4268009A34AC /* BubbaApp.swift */,
+				C1D145B229E730820022498A /* Views */,
+				C1EBA35F29CB4269009A34AC /* Assets.xcassets */,
+				C1D145B129E7306A0022498A /* Sounds */,
+				C1EBA36129CB4269009A34AC /* Preview Content */,
 			);
 			path = Bubba;
 			sourceTree = "<group>";
 		};
-		C1E7F21329C8A18700D63426 /* Preview Content */ = {
+		C1EBA36129CB4269009A34AC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C1E7F21429C8A18700D63426 /* Preview Assets.xcassets */,
+				C1EBA36229CB4269009A34AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1EBA37129CB465C009A34AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1EBA36F29CB463D009A34AC /* DefaultBackground.swift */,
+				C125EC7C29E6E43700CFAE3E /* playSoundtrack.swift */,
+				C125EC7E29E6E4C100CFAE3E /* playSound.swift */,
+				C125EC6029E6D91600CFAE3E /* GardenEnding.swift */,
+				C1E0755E29D5B62800F4FA36 /* DefaultNavigationButton.swift */,
+				ECA93A4629DDAB8300C7806E /* QuizModel.swift */,
+				C133C21029E440BF00070EB9 /* HomeButton.swift */,
+				C133C21429E58A8E00070EB9 /* DroppableObject.swift */,
+				C17AC97129DB18B0007BA935 /* DraggingObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECA93A4329DDAB0E00C7806E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ECA93A4429DDAB3200C7806E /* GameManagerVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ECA93A4829DDABAE00C7806E /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ECA93A4929DDABCF00C7806E /* ReusableText.swift */,
+				ECA93A4B29DDABE800C7806E /* ReusableImage.swift */,
+				ECA93A4D29DDAC0700C7806E /* OptionsGridView.swift */,
+				ECA93A4F29DDAC6000C7806E /* QuizCompletedView.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1E7F20929C8A18600D63426 /* Bubba */ = {
+		C1EBA35729CB4268009A34AC /* Bubba */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1E7F21829C8A18700D63426 /* Build configuration list for PBXNativeTarget "Bubba" */;
+			buildConfigurationList = C1EBA36629CB4269009A34AC /* Build configuration list for PBXNativeTarget "Bubba" */;
 			buildPhases = (
-				C1E7F20629C8A18600D63426 /* Sources */,
-				C1E7F20729C8A18600D63426 /* Frameworks */,
-				C1E7F20829C8A18600D63426 /* Resources */,
+				C1EBA35429CB4268009A34AC /* Sources */,
+				C1EBA35529CB4268009A34AC /* Frameworks */,
+				C1EBA35629CB4268009A34AC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +277,25 @@
 			);
 			name = Bubba;
 			productName = Bubba;
-			productReference = C1E7F20A29C8A18600D63426 /* Bubba.app */;
+			productReference = C1EBA35829CB4268009A34AC /* Bubba.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C1E7F20229C8A18600D63426 /* Project object */ = {
+		C1EBA35029CB4268009A34AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					C1E7F20929C8A18600D63426 = {
+					C1EBA35729CB4268009A34AC = {
 						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
-			buildConfigurationList = C1E7F20529C8A18600D63426 /* Build configuration list for PBXProject "Bubba" */;
+			buildConfigurationList = C1EBA35329CB4268009A34AC /* Build configuration list for PBXProject "Bubba" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +303,96 @@
 				en,
 				Base,
 			);
-			mainGroup = C1E7F20129C8A18600D63426;
-			productRefGroup = C1E7F20B29C8A18600D63426 /* Products */;
+			mainGroup = C1EBA34F29CB4268009A34AC;
+			productRefGroup = C1EBA35929CB4268009A34AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1E7F20929C8A18600D63426 /* Bubba */,
+				C1EBA35729CB4268009A34AC /* Bubba */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C1E7F20829C8A18600D63426 /* Resources */ = {
+		C1EBA35629CB4268009A34AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E7F21529C8A18700D63426 /* Preview Assets.xcassets in Resources */,
-				C1E7F21229C8A18700D63426 /* Assets.xcassets in Resources */,
+				C125EC7B29E6E40200CFAE3E /* trilha-geral.mp3 in Resources */,
+				C1D145AA29E6F3370022498A /* sapo.mp3 in Resources */,
+				C1D145A829E6F3370022498A /* cut soldadinho.mp3 in Resources */,
+				C1D145B029E6F3370022498A /* jogo jardim final.mp3 in Resources */,
+				C125EC7029E6E3F900CFAE3E /* vamos brincar.mp3 in Resources */,
+				C1D145A929E6F3370022498A /* cut minhoca.mp3 in Resources */,
+				C1D145A729E6F3370022498A /* minhoca.mp3 in Resources */,
+				C1D145AD29E6F3370022498A /* cut aranha.mp3 in Resources */,
+				C125EC7929E6E3F900CFAE3E /* naonaonao.mp3 in Resources */,
+				C1D145A529E6F3370022498A /* cut abelha.mp3 in Resources */,
+				C125EC7629E6E3F900CFAE3E /* quarto escuro.mp3 in Resources */,
+				C1EBA36329CB4269009A34AC /* Preview Assets.xcassets in Resources */,
+				C125EC7529E6E3F900CFAE3E /* jogo quarto.mp3 in Resources */,
+				C125EC7429E6E3F900CFAE3E /* muito bem.mp3 in Resources */,
+				C1D145A129E6F3370022498A /* soldadinho.mp3 in Resources */,
+				C1D145AC29E6F3370022498A /* cut borboleta.mp3 in Resources */,
+				C1D145A629E6F3370022498A /* aranha.mp3 in Resources */,
+				C1EBA36029CB4269009A34AC /* Assets.xcassets in Resources */,
+				C1D145A229E6F3370022498A /* borboleta.mp3 in Resources */,
+				C125EC7329E6E3F900CFAE3E /* intro.mp3 in Resources */,
+				C125EC7129E6E3F900CFAE3E /* quarto aceso.mp3 in Resources */,
+				C125EC7729E6E3F900CFAE3E /* jogo quarto final.mp3 in Resources */,
+				C1D145A429E6F3370022498A /* abelha.mp3 in Resources */,
+				C125EC6E29E6E3F900CFAE3E /* anan.mp3 in Resources */,
+				C1D145AF29E6F3370022498A /* joaninha.mp3 in Resources */,
+				C1D145AE29E6F3370022498A /* cut sapo.mp3 in Resources */,
+				C125EC7829E6E3F900CFAE3E /* uihuu.mp3 in Resources */,
+				C1D145A329E6F3370022498A /* caracol.mp3 in Resources */,
+				C125EC7229E6E3F900CFAE3E /* home.mp3 in Resources */,
+				C1D145AB29E6F3370022498A /* cut joaninha.mp3 in Resources */,
+				C1D145A029E6F3370022498A /* cut caracol.mp3 in Resources */,
+				C125EC6F29E6E3F900CFAE3E /* jogo jardim.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C1E7F20629C8A18600D63426 /* Sources */ = {
+		C1EBA35429CB4268009A34AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1E7F21029C8A18600D63426 /* ContentView.swift in Sources */,
-				C1E7F20E29C8A18600D63426 /* BubbaApp.swift in Sources */,
+				C1EBA37829D326C0009A34AC /* HomeView.swift in Sources */,
+				EC70B7D729CC7EB5001BD411 /* Garden.swift in Sources */,
+				C1EBA36E29CB45AA009A34AC /* RoomHomeView.swift in Sources */,
+				C1EBA35E29CB4268009A34AC /* ContentView.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+				C125EC6129E6D91600CFAE3E /* GardenEnding.swift in Sources */,
+				C1EBA37629CDDD18009A34AC /* RoomGameScene.swift in Sources */,
+				ECA93A4529DDAB3200C7806E /* GameManagerVM.swift in Sources */,
+				ECA93A4729DDAB8300C7806E /* QuizModel.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+				ECA93A4A29DDABCF00C7806E /* ReusableText.swift in Sources */,
+				C18F49B929E6EBD800F067C6 /* OnboardingView.swift in Sources */,
+				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
+				ECA93A5029DDAC6000C7806E /* QuizCompletedView.swift in Sources */,
+				C125EC7F29E6E4C100CFAE3E /* playSound.swift in Sources */,
+				ECA93A4C29DDABE800C7806E /* ReusableImage.swift in Sources */,
+				C17AC97229DB18B0007BA935 /* DraggingObject.swift in Sources */,
+				C133C21529E58A8E00070EB9 /* DroppableObject.swift in Sources */,
+				ECC175B529CB44090071CEEE /* GardenGame.swift in Sources */,
+				C1EBA37429CC87A9009A34AC /* RoomGameView.swift in Sources */,
+				C133C21129E440BF00070EB9 /* HomeButton.swift in Sources */,
+				C125EC7D29E6E43700CFAE3E /* playSoundtrack.swift in Sources */,
+				C1E0755F29D5B62800F4FA36 /* DefaultNavigationButton.swift in Sources */,
+				ECA93A4E29DDAC0700C7806E /* OptionsGridView.swift in Sources */,
+				C1EBA35C29CB4268009A34AC /* BubbaApp.swift in Sources */,
+				C1EBA37029CB463D009A34AC /* DefaultBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C1E7F21629C8A18700D63426 /* Debug */ = {
+		C1EBA36429CB4269009A34AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +452,7 @@
 			};
 			name = Debug;
 		};
-		C1E7F21729C8A18700D63426 /* Release */ = {
+		C1EBA36529CB4269009A34AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,7 +506,7 @@
 			};
 			name = Release;
 		};
-		C1E7F21929C8A18700D63426 /* Debug */ = {
+		C1EBA36729CB4269009A34AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -273,8 +520,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,13 +529,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.Bubba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		C1E7F21A29C8A18700D63426 /* Release */ = {
+		C1EBA36829CB4269009A34AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -302,8 +552,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,34 +561,37 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.Bubba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1E7F20529C8A18600D63426 /* Build configuration list for PBXProject "Bubba" */ = {
+		C1EBA35329CB4268009A34AC /* Build configuration list for PBXProject "Bubba" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1E7F21629C8A18700D63426 /* Debug */,
-				C1E7F21729C8A18700D63426 /* Release */,
+				C1EBA36429CB4269009A34AC /* Debug */,
+				C1EBA36529CB4269009A34AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1E7F21829C8A18700D63426 /* Build configuration list for PBXNativeTarget "Bubba" */ = {
+		C1EBA36629CB4269009A34AC /* Build configuration list for PBXNativeTarget "Bubba" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1E7F21929C8A18700D63426 /* Debug */,
-				C1E7F21A29C8A18700D63426 /* Release */,
+				C1EBA36729CB4269009A34AC /* Debug */,
+				C1EBA36829CB4269009A34AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C1E7F20229C8A18600D63426 /* Project object */;
+	rootObject = C1EBA35029CB4268009A34AC /* Project object */;
 }
